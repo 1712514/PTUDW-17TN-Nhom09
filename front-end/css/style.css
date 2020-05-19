@@ -1,6 +1,6 @@
 body {
     background-image: url("../resource/background.jpg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 .main-nav {
@@ -31,10 +31,14 @@ body {
     justify-content: center;
     align-items: center;
     margin: 40px;
+    font-weight: bold;
 }
 .bxh {
     background-color: #232f3e;
     border-radius: 12px;
     padding: 10px;
+    text-align: center;
+}
+tr {
     color: #f2e8dc;
 }

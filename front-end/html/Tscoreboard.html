@@ -55,11 +55,21 @@
             </div>
             <div class="bxh-title"><h1>Bảng xếp hạng</h1></div>
             <div class="container">
-                <div class="row bxh"><h1>ác</h1></div>
+                <table class="table bxh">
+                    <thead>
+                        <tr>
+                            <th scope="col">Thứ hạng</th>
+                            <th scope="col">Họ và tên</th>
+                            <th scope="col">Điểm</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rank"></tbody>
+                </table>
             </div>
         </div>
 
         <!-- Optional JavaScript -->
+        <script src="../js/Tscoreboard.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
