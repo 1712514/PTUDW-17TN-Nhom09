@@ -1,6 +1,6 @@
 body {
     background-image: url("../resource/background.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .main-nav {
