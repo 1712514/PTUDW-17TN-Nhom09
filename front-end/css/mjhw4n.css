@@ -25,15 +25,23 @@ body {
 .font-white {
     color: #f2e8dc;
 }
-.bxh-title {
+.info {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 15px;
+}
+.achie-title {
     color: black;
     display: flex;
+    width: 100%;
+    overflow: auto;
     justify-content: center;
     align-items: center;
-    margin: 40px;
+    margin: 15px;
     font-weight: bold;
 }
-.bxh {
+.achie-table {
     background-color: rgba(35, 47, 62, 0.8);
     border-radius: 12px;
     padding: 10px;

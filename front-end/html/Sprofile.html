@@ -9,6 +9,7 @@
         />
         <link rel="stylesheet" href="../css/mjhw4n.css" />
         <!-- Bootstrap CSS -->
+        <link rel="icon" href="../resource/WebIcon.png">
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -55,22 +56,26 @@
             </div>
             <!-- Content of site-->
             <div class="container">
+              <div class="achie-title">
+                <h1>Thông tin cá nhân</h1>
+              </div>
                 <div class="row">
-                  <img id="avatar" src="" alt="Avatar" width="200px" height="200px" class="c">
+                  <img id="avatar" src="" alt="Avatar" width="200px" height="200px" class="rounded float-left">
 
-                  <div>
+                  <div class="info">
                     <p id="nameinfo"><strong>Tên: </strong></p>
                     <p id="emailinfo"><strong>Email: </strong></p>
-                    <p id="passwordinfo"><strong>Password: </strong></p>
+                    <p id="passwordinfo"><strong>Password: **************</strong></p>
+                    
+                    <button class="btn btn-warning">Cập nhật</button>
                   </div>
                   
-                  <button class="btn btn-warning">Cập nhật</button>
+                </div>
+                <div class="achie-title">
+                  <h2>Thành tích</h2>
                 </div>
                 <div class="row">
-                  Thành tích
-                </div>
-                <div class="row">
-                  <table id="achievement" class="table bxh">
+                  <table id="achievement" class="table achie-table">
                     <thead>
                       <tr class="font-white">
                         <th scope="col">Đề</th>

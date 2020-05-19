@@ -29,7 +29,7 @@ createRow = (rowdata) => {
     tr.appendChild(td);
     return tr;
 }
-fillAcheivement = () => {
+fillAchievement = () => {
     var data = getAchievement();
     var body = document.getElementById("achiebody");
     Object.keys(data).forEach(function(key){
@@ -40,5 +40,5 @@ fillAcheivement = () => {
 document.getElementById("avatar").setAttribute("src", getAvatarURI());
 document.getElementById("nameinfo").innerHTML += getFullName();
 document.getElementById("emailinfo").innerHTML += getEmail();
-document.getElementById("passwordinfo").innerHTML += getPassword();
-fillAcheivement();
+//document.getElementById("passwordinfo").innerHTML += getPassword();
+fillAchievement();
