@@ -42,12 +42,3 @@ body {
 tr {
     color: #f2e8dc;
 }
-
-.test{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.testBtn{
-    margin: 10px;
-}
