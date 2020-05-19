@@ -18,12 +18,14 @@ getAchievement = () => {
     }
 }
 createRow = (rowdata) => {
-
+    var tr = document.createElement("tr");
+    tr.setAttribute("class", "font-white");
+    var th = document.createElement("th");
 }
 fillAcheivement = () => {
     var data = getAchievement();
     var body = document.getElementById("achiebody");
-    
+
     
 }
 
