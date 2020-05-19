@@ -34,7 +34,7 @@ body {
     font-weight: bold;
 }
 .bxh {
-    background-color: #232f3e;
+    background-color: rgba(35, 47, 62, 0.8);
     border-radius: 12px;
     padding: 10px;
     text-align: center;
