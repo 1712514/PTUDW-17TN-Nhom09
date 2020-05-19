@@ -1,22 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="../css/mjhw4n.css" />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Thông tin học viên</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+          <!-- Navabar -->
+            <div class="row main-nav">
+                <ul class="nnav col">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="Shomepage.html">
+                            <img
+                                src="../resource/LogoIcon.png"
+                                width="70"
+                                height="60"
+                                class="d-inline-block align-top"
+                                alt="Logo"
+                                loading="lazy"
+                            />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-white" href="Sevent.html"
+                            >Cuộc thi</a
+                        >
+                    </li>
+                </ul>
+                <ul class="nnav col justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link font-white" href="Sprofile.html"
+                            >Thông tin</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-white" href="login.html"
+                            >Đăng xuất</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <!-- Content of site-->
+            <div class="container">
+                <div class="row">
+                  <img id="avatar" src="" alt="Avatar" width="200px" height="200px" class="c">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+                  <div>
+                    <p id="nameinfo"><strong>Tên: </strong></p>
+                    <p id="emailinfo"><strong>Email: </strong></p>
+                    <p id="passwordinfo"><strong>Password: </strong></p>
+                  </div>
+                  
+                  <button class="btn btn-warning">Cập nhật</button>
+                </div>
+                <div class="row">
+                  Thành tích
+                </div>
+                <div class="row">
+                  <table id="achievement" class="table bxh">
+                    <thead>
+                      <tr class="font-white">
+                        <th scope="col">Đề</th>
+                        <th scope="col">Điểm</th>
+                      </tr>
+                    </thead>
+                    <tbody id="achiebody">
+                      <!-- <tr class="font-white">
+                        <th scope="row">De</th>
+                        <td>Diem</td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../js/Sprofile.js">
+        
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
