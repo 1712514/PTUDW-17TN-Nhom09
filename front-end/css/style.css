@@ -25,3 +25,16 @@ body {
 .font-white {
     color: #f2e8dc;
 }
+.bxh-title {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+.bxh {
+    background-color: #232f3e;
+    border-radius: 12px;
+    padding: 10px;
+    color: #f2e8dc;
+}
