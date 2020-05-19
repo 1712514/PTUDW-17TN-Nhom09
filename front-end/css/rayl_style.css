@@ -31,14 +31,19 @@ body {
     justify-content: center;
     align-items: center;
     margin: 40px;
-    font-weight: bold;
 }
 .bxh {
-    background-color: rgba(35, 47, 62, 0.8);
+    background-color: #232f3e;
     border-radius: 12px;
     padding: 10px;
-    text-align: center;
-}
-tr {
     color: #f2e8dc;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testBtn{
+    margin: 10px;
 }
