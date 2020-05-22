@@ -1,7 +1,20 @@
 var news = [
-    { title: "Thông báo hủy các lớp học phần Cơ sở lập trình MTH00005", link: "https://www.hcmus.edu.vn/component/content/article/186-phong-dao-tao/thong-bao-he-chinh-quy/dang-ky-hoc-phan/3026-thong-bao-huy-cac-lop-hoc-phan-co-so-lap-trinh-mth00005?Itemid=437" },
-    { title: "Kế hoạch giảng dạy - học tập từ HK2/2019-2020 - CT Liên thông đại học", link: "https://www.hcmus.edu.vn/component/content/article/192-phong-dao-tao/thong-bao-lien-thong-dai-hoc/thoi-khoa-bieu_lt/3018-ke-hoach-giang-day-hoc-tap-tu-hk2-2019-2020-ct-lien-thong-dai-hoc?Itemid=437" },
-    { title: "Thông báo kế hoạch thực tập Sinh học đại cương 2", link: "https://www.hcmus.edu.vn/component/content/article/191-phong-dao-tao/thong-bao-he-chinh-quy/thong-bao-khac/3027-thong-bao-ke-hoach-thuc-tap-sinh-hoc-dai-cuong-2?Itemid=437" },
+    { title: "Thi thử lần 1 - Ngày 01/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 2 - Ngày 02/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 3 - Ngày 03/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 4 - Ngày 04/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 5 - Ngày 05/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 6 - Ngày 06/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 7 - Ngày 07/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 8 - Ngày 08/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 9 - Ngày 09/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 10 - Ngày 10/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 11 - Ngày 11/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 12 - Ngày 12/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 13 - Ngày 13/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 14 - Ngày 14/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 15 - Ngày 15/05/2020", ref: "../html/Tscoreboard.html"},
+    { title: "Thi thử lần 16 - Ngày 16/05/2020", ref: "../html/Tscoreboard.html"},
 ];
 
 
@@ -13,7 +26,7 @@ function show_news() {
     for (var i=0; i<news.length; i++) {
         var li = document.createElement("li");
         var a = document.createElement("a");
-        a.setAttribute("href", news[i].link);
+        a.setAttribute("href", news[i].ref);
         a.setAttribute("class", "news-line");
         a.setAttribute("target", "_blank");
         a.appendChild(document.createTextNode(news[i].title));

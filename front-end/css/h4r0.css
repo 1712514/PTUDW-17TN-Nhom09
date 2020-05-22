@@ -33,17 +33,20 @@ body {
     border-radius: 4vh;
     margin-top: 100px;
     position: absolute;
+    padding: 5px;
 }
 
 .news-in {
-    background-color: #31485A;
     color: white;
-    height: 90%;
     border-radius: 3vh;
     padding: 15px;
-    position: absolute;
     list-style-type: none;
+    background-color: #31485A;
+    height: 90%;
+    border-radius: 3vh;
+    overflow: auto;
 }
+
 
 .news-title {
     text-align: center;
