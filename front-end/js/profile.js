@@ -8,7 +8,7 @@ getPassword = () => {
     return  "hihihaha";
 }
 getAvatarURI = () => {
-    return "../resource/avatar.jpeg";
+    return "../resource/avatar.jpg";
 }
 getAchievement = () => {
     return {
