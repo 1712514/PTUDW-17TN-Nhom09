@@ -88,11 +88,18 @@ tr {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 5px;
-    border-radius: 2vh !important;
+    border-radius: 3vh !important;
 }
 .card-img-top {
     height: 15vw;
 }
 .card-text {
     height: 10vw;
+}
+.img-fluid {
+    width: 50%;
+    height: 20px;
+}
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
