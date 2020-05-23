@@ -41,26 +41,29 @@ body {
     border-radius: 3vh;
     padding: 15px;
     list-style-type: none;
-    background-color: #31485A;
+    background-color: #31485a;
     height: 90%;
     border-radius: 3vh;
     overflow: auto;
 }
-
-
 .news-title {
     text-align: center;
     font-size: 32px;
 }
 
 .btn-create {
-    background-image: linear-gradient(to right, #FF8008 0%, #FFC837 51%, #FF8008 100%);
+    background-image: linear-gradient(
+        to right,
+        #ff8008 0%,
+        #ffc837 51%,
+        #ff8008 100%
+    );
     margin-top: 200px;
     margin-right: 80px;
     width: 300px;
     height: 300px;
     border-radius: 150px;
-    color: #232F3E;
+    color: #232f3e;
     font-size: 30px;
 }
 
