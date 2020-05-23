@@ -8,6 +8,7 @@
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <link rel="stylesheet" href="../css/rayl_style.css" />
+        <link rel="icon" href="../resource/WebIcon.png">
         <!-- Bootstrap CSS -->
         <link
             rel="stylesheet"
@@ -15,12 +16,12 @@
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
             crossorigin="anonymous"
         />
-
-        <title>UniEz</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>Luyện đề</title>
     </head>
     <body>
-        < class="container-fluid">
-            <class class="row main-nav">
+        <div class="container-fluid">
+            <div class="row main-nav">
                 <ul class="nnav col">
                     <li class="nav-item">
                         <a class="navbar-brand" href="Thomepage.html">
@@ -35,14 +36,24 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-white" href="Tevent.html"
+                        <a class="nav-link font-white" href="Ssearchtest.html"
+                            >Luyện đề</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-white" href="Ssearchreview.html"
+                            >Luyện chuyên đề</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-white" href="Sevent.html"
                             >Cuộc thi</a
                         >
                     </li>
                 </ul>
                 <ul class="nnav col justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link font-white" href="Tprofile.html"
+                        <a class="nav-link font-white" href="Sprofile.html"
                             >Thông tin</a
                         >
                     </li>
@@ -52,18 +63,59 @@
                         >
                     </li>
                 </ul>
-            </class>
+            </div>
+        </div>
+        <div class ="container search">
+            <div class="dropdown">
+                <button class="dropbtn material-icons">filter_list</button>
+                <div class="dropdown-content">
+                    <h3 class="dropdown-header">Môn</h3>
+                    <button class="col-1 btn active" >Tất cả</button>
+                    <button class="col-1 btn" >Toán</button>
+                    <button class="col-1.5 btn" >Vật lý</button>
+                    <button class="col-1.5 btn" >Hóa học</button>
+                    <button class="col-1.5 btn" >Sinh học</button>
+                    <button class="col-1.5 btn" >Tiếng anh</button>
+                    <button class="col-1.5 btn" >Lịch sử</button>
+                    <button class="col-1 btn" >Địa lý</button>
+                    <button class="col-2.5 btn" >Giáo dục công dân</button>
+                    <h3 class="dropdown-header">Mức độ</h3>
+                    <button class="col-1 btn active" >Tất cả</button>
+                    <button class="col-1.5 btn" >Dễ</button>
+                    <button class="col-1.5 btn" >Trung bình</button>
+                    <button class="col-1.5 btn" >Khó</button>
+                </div>
+            </div>
+            <input class="input" id="myInput" type="text" placeholder="Search..">
+
+        </div>
             <div class="container-fluid">
                 <div class="row" id="testList">
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                    <div class="col-3 test"><button type="button" class="btn btn-warning testBtn">Warning</button></div>
-                  </div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                    <div class="col-3 test"><button type="button" class="btn testBtn">Warning</button></div>
+                </div>
             </div>
         </div>
 
