@@ -71,7 +71,8 @@ tr {
     margin: 0px;
 }
 .news-in li {
-    margin: 20px;
+    margin: 10px;
+    padding: 10px;
     word-wrap: break-word;
 }
 .news-line {
@@ -81,4 +82,16 @@ tr {
 .homepage-box {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.card {
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+.card-img-top {
+    height: 15vw;
+}
+.card-text {
+    height: 10vw;
 }
