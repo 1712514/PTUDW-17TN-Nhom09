@@ -8,6 +8,8 @@
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="../css/mjhw4n.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="icon" href="../resource/WebIcon.png">
     <link
@@ -22,32 +24,50 @@
     <div class="container-fluid">
       <!-- Content of site -->
       <div class="row">
-        <img src="../resource/LogoText.png" class="img-fluid" alt="" >
-      </div>
-      <div class="row">
-        <div class="jumbotron col-7">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr class="my-4">
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <!-- Hello -->
+        <div class="col-7">
+          <div class="row" style="display: flex; justify-content: center;">
+            <img src="../resource/LogoText.png" class="img-fluid" alt="">
+          </div>
+          <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          </div>
         </div>
-        <form class="col-5">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <!-- Form -->
+        <div class="col-5">
+          <div class="row" id="empty-row"></div>
+          <div class="row btn-container">
+            <a class="btn col-6 btn-unfocus" href="../html/signup.html">Đăng ký</a>
+            <a class="btn col-6 btn-focus">Đăng nhập</a>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+          <form class="form">
+            <div class="h-100 input-container">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="material-icons">person</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Tên đăng nhập" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="material-icons">vpn_key</span>
+                </div>
+                <input type="password" class="form-control" placeholder="Mật khẩu" aria-label="Password" aria-describedby="basic-addon1">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label" for="exampleCheck1">Duy trì đăng nhập?</label>
+              </div>
+            </div>
+            <div class="row" id="div-login-signup">
+              <a type="submit" id="btn-login-signup" class="btn btn-warning">Đăng nhập</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 

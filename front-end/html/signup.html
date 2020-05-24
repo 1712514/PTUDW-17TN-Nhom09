@@ -8,6 +8,8 @@
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="../css/mjhw4n.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="icon" href="../resource/WebIcon.png">
     <link
@@ -15,11 +17,61 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous"
-    />  
+    />
     <title>Đăng ký</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container-fluid">
+      <!-- Content of site -->
+      <div class="row">
+        <!-- Hello -->
+        <div class="col-7">
+          <div class="row" style="display: flex; justify-content: center;">
+            <img src="../resource/LogoText.png" class="img-fluid" alt="">
+          </div>
+          <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="col-5">
+          <div class="row" id="empty-row"></div>
+          <div class="row btn-container">
+            <a class="btn col-6 btn-focus">Đăng ký</a>
+            <a class="btn col-6 btn-unfocus" href="../html/login.html">Đăng nhập</a>
+          </div>
+          <form class="form">
+            <div class="h-100 input-container">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="material-icons">person</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Tên đăng nhập" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="material-icons">email</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Email của bạn" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="material-icons">vpn_key</span>
+                </div>
+                <input type="password" class="form-control" placeholder="Mật khẩu" aria-label="Password" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="row" id="div-login-signup">
+              <a type="submit" id="btn-login-signup" class="btn btn-warning">Đăng ký</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

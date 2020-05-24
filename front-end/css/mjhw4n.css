@@ -52,13 +52,13 @@ tr {
 }
 .news-out {
     background-color: #232f3e;
-    color: white;
+    color: #f2e8dc;
     border-radius: 4vh;
     position: absolute;
 }
 .news-in {
     background-color: #31485A;
-    color: white;
+    color: #f2e8dc;
     height: calc(100% - 71px);
     margin: 0px;
     border-radius: 3vh;
@@ -84,7 +84,6 @@ tr {
     margin-bottom: 50px;
 }
 .card {
-    cursor: pointer;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 5px;
@@ -102,4 +101,91 @@ tr {
 }
 .jumbotron {
     background-color: rgba(0, 0, 0, 0) !important;
+    padding-top: 32px;
+}
+.img-fluid {
+    padding: 30px;
+    height: 300px;
+    width: 350px;
+}
+#empty-row {
+    height: 215px;
+}
+.btn-container {
+    margin: 0px !important;
+    background-color: #232f3e;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.btn-focus {
+    border-radius: 12px !important;
+    background-color: #232f3e !important;
+    color: #f2e8dc !important;
+    cursor: auto !important;
+}
+.btn-unfocus {
+    border-radius: 12px !important;
+    background-color: #31485A !important;
+    color: #f2e8dc !important;
+}
+.form {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #232f3e;
+    height: 270px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 32px;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.form-control {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    border-color: #31485A !important;
+    background-color: #31485A !important;
+    padding-left: 0px !important;
+    color: #f2e8dc !important;
+}
+.form-control::placeholder {
+    color: #f2e8dc !important;
+    opacity: 1;
+}
+.material-icons {
+    width: 38px;
+    height: 38px;
+    color: #f2e8dc;
+    background-color: #31485A;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+}
+.form-check {
+    display: flex !important;
+    justify-self: center;
+    height: 38px;
+    margin: 0px !important;
+    padding-left: 0px !important;
+}
+.form-check-input {
+    align-self: center;
+    margin: 0px !important;
+}
+.form-check-label {
+    align-self: center;
+    color: #f2e8dc;
+    padding-left: 20px;
+}   
+#div-login-signup {
+    display: flex;
+    justify-content: center;
+}
+#btn-login-signup {
+    min-width: 110px;
 }
