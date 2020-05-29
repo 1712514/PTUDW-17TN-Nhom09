@@ -42,28 +42,41 @@
         <div class="col news-out">
 
           <div class="form-group input-row">
-            <input type="text" class="form-control input-form text-light" placeholder="Thời lượng thi (phút)">
+            <input type="text" class="form-control input-form" placeholder="Thời lượng thi (phút). VD: 60">
           </div>
 
           <div class="form-group input-row">
-            <input type="text" class="form-control input-form text-light" placeholder="Thời gian bắt đầu (13:30 20:12:2020)">
+            <input type="text" class="form-control input-form" placeholder="Thời gian bắt đầu. VD: 13:30 20:12:2020">
           </div>
 
           <div class="form-group input-row">
-            <div class="custom-file" style="height: 100%; background-color: #31485a;">
-              <input type="file" class="custom-file-input h-100" id="customFile" name="filename" >
+            <div class="custom-file" style="height: 100%;">
+              <input type="file" class="custom-file-input h-100" id="customFile" name="filename" onchange="loadFilename()">
               <label class="custom-file-label" for="customFile" id="input-label">Tải lên tập tin đề thi (.docx)</label>
             </div>
           </div>
 
         </div>
-        <button type="button" class="col-4 offset-4 btn-create-event" onclick="relocate_create()">Khởi tạo</button>
+        <button type="button" class="col-4 offset-4 btn-create-event" data-toggle="modal" data-target="#exampleModal">Khởi tạo</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                Key của cuộc thi là: 1KtHuj
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn-confirm rounded" data-dismiss="modal" onclick="relocateHomepage()">Duyệt</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Optional JavaScript -->
-  <script src="../js/Thomepage.js"></script>
+  <script src="../js/Tevent.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
