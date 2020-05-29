@@ -28,7 +28,7 @@ body {
 
 .news-out {
     background-color: #232f3e;
-    color: white;
+    color: #f2e8dc;
     height: 70vh;
     border-radius: 4vh;
     margin-top: 100px;
@@ -37,7 +37,7 @@ body {
 }
 
 .news-in {
-    color: white;
+    color: #f2e8dc;
     border-radius: 3vh;
     padding: 15px;
     list-style-type: none;
@@ -74,7 +74,7 @@ body {
 
 .news-line {
     font-size: 16px;
-    color: white;
+    color: #f2e8dc;
 }
 
 .btn-create-event {
@@ -95,25 +95,15 @@ body {
     background-color: #31485a;
     height: 100%;
     font-size: 5vh;
+    color: #f2e8dc;
 }
 
-.custom-file-input[type="file"] {
-    background-color: #31485a;
-    height: 100px;
-    font-size: 5vh;
-}
 
 .input-form[type="text"]:focus {
     background-color: #31485a;
+    color: #f2e8dc;
 }
 
-.input-form[type="file"]:focus {
-    background-color: #31485a;
-}
-
-.input-form[type="text"]:disabled {
-    background-color: #31485a;
-}
 
 .input-row {
     height: 20%;
