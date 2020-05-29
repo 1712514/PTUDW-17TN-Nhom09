@@ -31,7 +31,7 @@ body {
     color: #f2e8dc;
     height: 70vh;
     border-radius: 4vh;
-    margin-top: 100px;
+    margin-top: 10vh;
     position: absolute;
     padding: 5px;
 }
@@ -88,7 +88,7 @@ body {
     border-radius: 50px;
     color: #232f3e;
     font-size: 3vh;
-    height: 5vh;
+    height: 7vh;
 }
 
 .input-form[type="text"] {
