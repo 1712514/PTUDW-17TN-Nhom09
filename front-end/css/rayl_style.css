@@ -25,20 +25,18 @@ body {
 .font-white {
     color: #f2e8dc;
 }
-.test{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+/*------------------------Ssearchtest-Ssearchreview---------------------------*/
+
 .testBtn{
-    margin: 40px;
+    margin: 62px !important;
     min-height: 200px;
-    min-width: 350px;
+    min-width: 350px; 
     background-image: linear-gradient(to bottom right,#FF8008,#FFC837) !important;
 }
 
 .search{
-    margin: 20px;
+    margin: 15px;
     padding: 5px;
     background-color: #232F3E;
     border-radius: .25rem;
@@ -48,10 +46,10 @@ body {
     background-color: #31485A;
     color:white;
 
-    width: 92%;
-    height: calc(1.5em + .75rem + 2px);
+    width: 94%;
+    height: calc(1.5em + .75rem);
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.5;
     background-clip: padding-box;
@@ -60,11 +58,8 @@ body {
     transition: border-color .15s
    
 }
-.filter{
-    padding: 10px;
-}
 
-.btn {
+.filterBtn {
     border:none;
     outline: none;
     margin: 5px;
@@ -72,26 +67,25 @@ body {
     background-color: #677B8B !important;
     cursor: pointer;
     color: white !important;
+    border-radius: 5px;
   }
   
-  .btn:hover {
+  .filterBtn:hover {
     background-color: #31485A !important;
     color: #FFC837 !important;
   }
   
-  .btn.active {
+  .filterBtn.active,.filterBtn.active2{
     background-color:#FFC837  !important;
     color: #232F3E !important;
   }
-
-/*---------------------------------------------------*/
 
 
   .dropbtn {
     background-color: #FF8008;
     color: white;
     padding: 10px;
-    font-size: 14px;
+    font-size: 1rem !important;
     border: none;
     margin: 10px;
     cursor: pointer;
@@ -101,6 +95,7 @@ body {
   .dropdown {
     position: relative;
     display: inline-block;
+    margin-right: 5px;
   }
   
   .dropdown-content {
@@ -119,4 +114,35 @@ body {
   
   .dropdown:hover .dropbtn {
     background-color: #FFC837;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hidden{
+    display: none !important;
+  }
+
+  /*-------------------------Stest--------------------------------*/
+  body {
+    position: relative;
+  }
+  div.nav-pills {
+    position: fixed;
+    width: 450px;
+  }
+
+  a.col-2{
+    margin: 5px;
+    padding: 5px !important;
+  }
+
+  div.col-8 div {
+    height: 800px;
+  }
+
+  .infoSection{
+    position: fixed;
+    top:200px;
   }

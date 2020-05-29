@@ -50,3 +50,35 @@ body {
 tr {
     color: #f2e8dc;
 }
+.news-out {
+    background-color: #232f3e;
+    color: white;
+    border-radius: 4vh;
+    position: absolute;
+}
+.news-in {
+    background-color: #31485A;
+    color: white;
+    height: calc(100% - 71px);
+    margin: 0px;
+    border-radius: 3vh;
+    position: absolute;
+    list-style-type: none;
+}
+.news-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 0px;
+}
+.news-in li {
+    margin: 20px;
+    word-wrap: break-word;
+}
+.news-line {
+    font-size: 16px;
+    color: white;
+}
+.homepage-box {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
