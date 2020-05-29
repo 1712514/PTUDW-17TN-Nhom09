@@ -120,10 +120,6 @@ body {
     margin: 7vh;
 }
 
-.my-div {
-    background-color: #31485a;
-}
-
 #input-label {
     height: 100%; 
     background-color: #31485a; 
@@ -131,10 +127,6 @@ body {
     align-items: center;
     color: #777777;
     font-size: 5vh;
-}
-
-#input-label>button {
-    color: red;
 }
 
 ::placeholder {
