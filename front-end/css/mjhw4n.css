@@ -93,38 +93,39 @@ tr {
 .card-text {
     height: 10vw;
 }
-.img-fluid {
-    width: 50%;
-    height: 20px;
-}
 .jumbotron {
     background-color: rgba(0, 0, 0, 0) !important;
     padding-top: 32px;
 }
 .img-fluid {
     padding: 30px;
-    height: 300px;
-    width: 350px;
-}
-#empty-row {
-    height: 215px;
+    height: 35vh;
+    width: 80%;
 }
 .btn-container {
     margin: 0px !important;
     background-color: #232f3e;
+    height: 10vh;
 }
 .btn-focus {
     background-color: #232f3e !important;
     color: #f2e8dc !important;
     cursor: auto !important;
+    height: 10vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 .btn-unfocus {
     background-color: #31485A !important;
     color: #f2e8dc !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 .form {
     background-color: #232f3e;
-    height: 270px;
+    height: 50vh;
     display: flex !important;
     flex-direction: column;
     justify-content: space-around;
@@ -140,6 +141,7 @@ tr {
     background-color: #31485A !important;
     padding-left: 0px !important;
     color: #f2e8dc !important;
+    height: 10vh !important;
 }
 .form-control::placeholder {
     color: #f2e8dc !important;
@@ -147,33 +149,38 @@ tr {
 }
 .material-icons {
     width: 38px;
-    height: 38px;
     color: #f2e8dc;
     background-color: #31485A;
     display: flex !important;
     justify-content: center;
     align-items: center;
+    height: 10vh;
 }
 .form-check {
     display: flex !important;
     justify-self: center;
-    height: 38px;
+    height: 10vh !important;
     margin: 0px !important;
     padding-left: 0px !important;
 }
 .form-check-input {
     align-self: center;
     margin: 0px !important;
+    height: 10vh !important;
 }
 .form-check-label {
     align-self: center;
     color: #f2e8dc;
     padding-left: 20px;
+    height: 10vh !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }   
 #div-login-signup {
     display: flex;
     justify-content: center;
 }
 #btn-login-signup {
-    min-width: 110px;
+    min-width: 50%;
 }
