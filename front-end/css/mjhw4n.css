@@ -38,12 +38,11 @@ body {
     overflow: auto;
     justify-content: center;
     align-items: center;
-    margin: 15px;
+    padding: 15px;
     font-weight: bold;
 }
 .achie-table {
     background-color: rgba(35, 47, 62, 0.8);
-    border-radius: 12px;
     padding: 10px;
     text-align: center;
 }
@@ -53,7 +52,6 @@ tr {
 .news-out {
     background-color: #232f3e;
     color: #f2e8dc;
-    border-radius: 4vh;
     position: absolute;
 }
 .news-in {
@@ -61,7 +59,6 @@ tr {
     color: #f2e8dc;
     height: calc(100% - 71px);
     margin: 0px;
-    border-radius: 3vh;
     position: absolute;
     list-style-type: none;
 }
@@ -80,14 +77,15 @@ tr {
     color: white;
 }
 .homepage-box {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 .card {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 5px;
-    border-radius: 3vh !important;
 }
 .card-img-top {
     height: 15vw;
@@ -114,23 +112,17 @@ tr {
 .btn-container {
     margin: 0px !important;
     background-color: #232f3e;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
 }
 .btn-focus {
-    border-radius: 12px !important;
     background-color: #232f3e !important;
     color: #f2e8dc !important;
     cursor: auto !important;
 }
 .btn-unfocus {
-    border-radius: 12px !important;
     background-color: #31485A !important;
     color: #f2e8dc !important;
 }
 .form {
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
     background-color: #232f3e;
     height: 270px;
     display: flex !important;
@@ -144,8 +136,6 @@ tr {
     justify-content: flex-start;
 }
 .form-control {
-    border-top-right-radius: 12px !important;
-    border-bottom-right-radius: 12px !important;
     border-color: #31485A !important;
     background-color: #31485A !important;
     padding-left: 0px !important;
@@ -163,8 +153,6 @@ tr {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    border-top-left-radius: 12px !important;
-    border-bottom-left-radius: 12px !important;
 }
 .form-check {
     display: flex !important;
