@@ -138,12 +138,13 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 3vh;
+    text-align: center;
 }
 
 .modal-content .modal-footer {
     display: flex;
     background-color: #232f3e;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -166,4 +167,19 @@ body {
 
 .modal-footer .rounded {
     border-radius: 3vh !important;
+}
+
+.out-key {
+    background-color: #232f3e;
+    color: #f2e8dc;
+    height: 20vh;
+    border-radius: 4vh;
+    margin-top: 30vh;
+    position: absolute;
+    padding: 2vh;
+}
+
+.input-key {
+    margin: 2vh;
+    height: 12vh;
 }
