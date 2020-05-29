@@ -130,3 +130,40 @@ body {
     background-color: #31485a;
     color: #777777;
 }
+
+.modal-body{
+    display: flex;
+    background-color: #232f3e;
+    color: #f2e8dc;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+}
+
+.modal-content .modal-footer {
+    display: flex;
+    background-color: #232f3e;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    height: 30vh;
+}
+
+.btn-confirm {
+    background-image: linear-gradient(
+        to right,
+        #ff8008 0%,
+        #ffc837 51%,
+        #ff8008 100%
+    );
+    color: #232f3e;
+    font-size: 3vh;
+    height: 5vh;
+    width: 30%;
+}
+
+.modal-footer .rounded {
+    border-radius: 3vh !important;
+}
