@@ -77,8 +77,8 @@ tr {
     color: white;
 }
 .homepage-box {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     padding-left: 32px;
     padding-right: 32px;
 }
@@ -86,12 +86,13 @@ tr {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 5px;
+    height: 70vh;
 }
 .card-img-top {
-    height: 15vw;
+    height: 40vh;
 }
 .card-text {
-    height: 10vw;
+    height: 10vh;
 }
 .jumbotron {
     background-color: rgba(0, 0, 0, 0) !important;
@@ -99,19 +100,19 @@ tr {
 }
 .img-fluid {
     padding: 30px;
-    height: 35vh;
-    width: 80%;
+    height: 28vh !important;
+    width: 70%;
 }
 .btn-container {
     margin: 0px !important;
     background-color: #232f3e;
-    height: 10vh;
+    height: 8vh;
 }
 .btn-focus {
     background-color: #232f3e !important;
     color: #f2e8dc !important;
     cursor: auto !important;
-    height: 10vh;
+    height: 8vh;
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -119,6 +120,7 @@ tr {
 .btn-unfocus {
     background-color: #31485A !important;
     color: #f2e8dc !important;
+    height: 8vh;
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -141,7 +143,7 @@ tr {
     background-color: #31485A !important;
     padding-left: 0px !important;
     color: #f2e8dc !important;
-    height: 10vh !important;
+    height: 8vh !important;
 }
 .form-control::placeholder {
     color: #f2e8dc !important;
@@ -154,25 +156,25 @@ tr {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 8vh;
 }
 .form-check {
     display: flex !important;
     justify-self: center;
-    height: 10vh !important;
+    height: 8vh !important;
     margin: 0px !important;
     padding-left: 0px !important;
 }
 .form-check-input {
     align-self: center;
     margin: 0px !important;
-    height: 10vh !important;
+    height: 8vh !important;
 }
 .form-check-label {
     align-self: center;
     color: #f2e8dc;
     padding-left: 20px;
-    height: 10vh !important;
+    height: 8vh !important;
     display: flex !important;
     justify-content: center;
     align-items: center;
