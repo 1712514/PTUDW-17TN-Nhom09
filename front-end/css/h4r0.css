@@ -76,3 +76,75 @@ body {
     font-size: 16px;
     color: white;
 }
+
+.btn-create-event {
+    background-image: linear-gradient(
+        to right,
+        #ff8008 0%,
+        #ffc837 51%,
+        #ff8008 100%
+    );
+    margin-top: 7vh;
+    border-radius: 50px;
+    color: #232f3e;
+    font-size: 3vh;
+    height: 5vh;
+}
+
+.input-form[type="text"] {
+    background-color: #31485a;
+    height: 100%;
+    font-size: 5vh;
+}
+
+.custom-file-input[type="file"] {
+    background-color: #31485a;
+    height: 100px;
+    font-size: 5vh;
+}
+
+.input-form[type="text"]:focus {
+    background-color: #31485a;
+}
+
+.input-form[type="file"]:focus {
+    background-color: #31485a;
+}
+
+.input-form[type="text"]:disabled {
+    background-color: #31485a;
+}
+
+.input-row {
+    height: 20%;
+    margin: 7vh;
+}
+
+.my-div {
+    background-color: #31485a;
+}
+
+#input-label {
+    height: 100%; 
+    background-color: #31485a; 
+    display: flex; 
+    align-items: center;
+    color: #777777;
+    font-size: 5vh;
+}
+
+#input-label>button {
+    color: red;
+}
+
+::placeholder {
+    color: #777777;
+}
+
+#input-label.custom-file-label::after {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #31485a;
+    color: #777777;
+}
