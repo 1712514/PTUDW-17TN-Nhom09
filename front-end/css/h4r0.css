@@ -33,22 +33,28 @@ body {
     border-radius: 4vh;
     margin-top: 10vh;
     position: absolute;
-    padding: 5px;
+    padding: 1vh;
 }
 
 .news-in {
     color: #f2e8dc;
     border-radius: 3vh;
-    padding: 15px;
+    padding-bottom: 2vh;
     list-style-type: none;
     background-color: #31485a;
     height: 90%;
     border-radius: 3vh;
     overflow: auto;
+    -ms-overflow-style: none;
 }
+
+.news-in::-webkit-scrollbar {
+    display: none;
+}
+
 .news-title {
     text-align: center;
-    font-size: 32px;
+    font-size: 4vh;
 }
 
 .btn-create {
@@ -58,22 +64,21 @@ body {
         #ffc837 51%,
         #ff8008 100%
     );
-    margin-top: 200px;
-    margin-right: 80px;
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
+    margin-top: 30vh;
+    margin-right: 10vh;
+    width: 30vh;
+    height: 30vh;
     color: #232f3e;
-    font-size: 30px;
+    font-size: 4vh;
 }
 
 .news-in li {
-    margin: 20px;
+    margin: 3vh;
     word-wrap: break-word;
 }
 
 .news-line {
-    font-size: 16px;
+    font-size: 2vh;
     color: #f2e8dc;
 }
 
@@ -138,12 +143,13 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 3vh;
+    text-align: center;
 }
 
 .modal-content .modal-footer {
     display: flex;
     background-color: #232f3e;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -166,4 +172,19 @@ body {
 
 .modal-footer .rounded {
     border-radius: 3vh !important;
+}
+
+.out-key {
+    background-color: #232f3e;
+    color: #f2e8dc;
+    height: 20vh;
+    border-radius: 4vh;
+    margin-top: 30vh;
+    position: absolute;
+    padding: 2vh;
+}
+
+.input-key {
+    margin: 2vh;
+    height: 12vh;
 }

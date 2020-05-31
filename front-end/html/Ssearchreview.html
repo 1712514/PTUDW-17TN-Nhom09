@@ -7,7 +7,9 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/rayl_style.css" />
+        <link rel="icon" href="../resource/WebIcon.png">
+
         <!-- Bootstrap CSS -->
         <link
             rel="stylesheet"
@@ -15,15 +17,16 @@
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
             crossorigin="anonymous"
         />
-
-        <title>Hello, world!</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Luyện chuyên đề</title>
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid fixed-top">
             <div class="row main-nav">
                 <ul class="nnav col">
                     <li class="nav-item">
-                        <a class="navbar-brand" href="Thomepage.html">
+                        <a class="navbar-brand" href="Shomepage.html">
                             <img
                                 src="../resource/LogoIcon.png"
                                 width="70"
@@ -35,31 +38,82 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-white" href="Tevent.html"
+                        <a class="nav-link font-white" href="Ssearchtest.html"
+                            >Luyện đề</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-white" href="Ssearchreview.html"
+                            >Luyện chuyên đề</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-white" href="Sevent.html"
                             >Cuộc thi</a
                         >
                     </li>
                 </ul>
                 <ul class="nnav col justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link font-white" href="Tprofile.html"
+                        <a class="nav-link font-white" href="Sprofile.html"
                             >Thông tin</a
                         >
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-white" href="login.html"
-                            >Đăng xuất</a
-                        >
+                        <a class="nav-link font-white" href="login.html">Đăng xuất</a>
                     </li>
                 </ul>
             </div>
-            <div class="bxh-title"><h1>Bảng xếp hạng</h1></div>
-            <div class="container">
-                <div class="row bxh"><h1>ác</h1></div>
+        
+            <div class ="container search">
+                <div class="dropdown">
+                    <button class="dropbtn material-icons">filter_list</button>
+                    <div class="dropdown-content">
+                        <h3 class="dropdown-header">Môn</h3>
+                        <span id="subjects">
+                            <button class="col-1 filterBtn active" id="all">Tất cả</button>
+                            <button class="col-1 filterBtn" id="TO">Toán</button>
+                            <button class="col-1.5 filterBtn" id="LI">Vật lý</button>
+                            <button class="col-1.5 filterBtn" id="HO">Hóa học</button>
+                            <button class="col-1.5 filterBtn" id="SI">Sinh học</button>
+                            <button class="col-1.5 filterBtn" id="TA">Tiếng anh</button>
+                            <button class="col-1.5 filterBtn" id="SU">Lịch sử</button>
+                            <button class="col-1 filterBtn" id="DI">Địa lý</button>
+                            <button class="col-2.5 filterBtn" id="GD">Giáo dục công dân</button>
+
+                    </div>
+                </div>
+                <input class="input" id="myInput" type="text" placeholder="Tìm kiếm...">
+            </div>
+        </div>
+
+        <div style="height: 150px;"></div>
+
+            <div class="container-fluid">
+                <div class="row" id="testList">
+                    
+                </div>
+
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-body text-center mb-5">
+                          <h1>Bạn muốn luyện tập chuyên đề này?</h1>
+                          <div class="btn-group" id="abc">
+                            <button type="button" class="btn btn-secondary btn-lg mr-2 rounded-lg" data-dismiss="modal">Hủy bỏ</button>
+                            <button type="button" class="btn btn-success btn-lg rounded-lg" id="startTest">Tiếp tục</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
             </div>
         </div>
 
         <!-- Optional JavaScript -->
+        <script src="../js/Ssearchreview.js"></script>
+
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
