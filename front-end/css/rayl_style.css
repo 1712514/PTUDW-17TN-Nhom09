@@ -148,6 +148,7 @@ h1{
 button.rounded-lg{
   color: #232f3e;
   background-image: linear-gradient(to bottom right,#FF8008,#FFC837) !important;
+  border-radius: 20px !important;
 }
 
 div.btn-group{
@@ -179,10 +180,11 @@ a.col-2{
     border-radius: 10px !important;
   } 
 
+a.active{
+  border: solid 0.2em;
+  border-color: black;
+}
 
-div.col-8 div {
-    height: 600px;
-  }
 
 .infoSection{
     position: fixed;
@@ -227,6 +229,27 @@ span {
 
 /*----------------Question----------------*/
 .background {
+  height: 500px;
   background-color: rgba(35, 47, 62, 0.8) !important;
   color: #f2e8dc;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.image-test{
+  width: 100%;
+}
+
+.question{
+  padding: 30px !important;
+}
+
+.emptySpace{
+  height: 200px;
+  background-color: white !important;
+}
+
+.picked{
+  background-color: rgb(45, 241, 45) !important;
 }
