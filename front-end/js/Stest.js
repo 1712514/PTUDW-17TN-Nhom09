@@ -334,7 +334,7 @@ $(document).ready(function(){
       $("<div/>",{"class":"col-2 image","id":"image_"+i.toString()}).appendTo("#s01_"+i.toString());
       $("<img/>",{"class":"image-test","src":"../resource/homepage-review.jpg","alt":"abc"}).appendTo("#image_"+i.toString())
       if(i == questions.length-1){
-        $("<div/>",{"class":"emptySpace"}).appendTo("#section"+i.toString());
+        $("<div/>",{"class":"emptySpace", "id" :"endSection"}).appendTo("#section"+i.toString());
       }
     }
 
@@ -362,6 +362,7 @@ $(document).ready(function(){
 function showResult(){
   $("#timer").remove();
   $("#Submit").remove();
+  $("#endSection").remove();
   var numberOfCorrect = questions.length;;
   $("input:radio[name=optradio]").attr("disabled",true);
   for(var i = 0;i<questions.length;i++){
@@ -388,6 +389,9 @@ function showResult(){
 
     $("#section"+i.toString()).css("height","800px");
 
+    if(i == questions.length-1){
+      $("<div/>",{"class":"emptySpace"}).appendTo("#section"+i.toString());
+    }
   }
 
   var point = numberOfCorrect*(10/questions.length);
