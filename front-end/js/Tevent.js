@@ -10,3 +10,13 @@ function loadFilename() {
 function relocateHomepage() {
   location.href = "../html/Thomepage.html";
 }
+
+function getEnter() {
+  document.addEventListener("keyup", event => {
+    if (event.keyCode === 13) {
+      relocateHomepage();
+    }
+  })
+}
+
+getEnter();

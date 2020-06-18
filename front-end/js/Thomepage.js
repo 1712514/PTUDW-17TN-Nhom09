@@ -36,4 +36,13 @@ function show_news() {
     }
 }
 
+function getEnter() {
+    document.addEventListener("keyup", event => {
+      if (event.keyCode === 13) {
+        relocate_create();
+      }
+    })
+  }
+  
 show_news();
+getEnter();
