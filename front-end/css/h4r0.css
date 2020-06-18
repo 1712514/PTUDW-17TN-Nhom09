@@ -27,7 +27,6 @@ body {
     height: 70vh;
     border-radius: 4vh;
     margin-top: 10vh;
-    position: absolute;
     padding: 1vh;
 }
 
@@ -60,7 +59,7 @@ body {
         #ff8008 100%
     );
     margin-top: 30vh;
-    margin-right: 10vh;
+    margin-bottom: 10vh;
     width: 30vh;
     height: 30vh;
     color: #232f3e;
@@ -93,8 +92,7 @@ body {
 
 .input-form[type="text"] {
     background-color: #31485a;
-    height: 100%;
-    font-size: 5vh;
+    font-size: 2vw;
     color: #f2e8dc;
 }
 
@@ -105,7 +103,7 @@ body {
 
 .input-row {
     height: 20%;
-    margin: 7vh;
+    margin: 2vw;
 }
 
 #input-label {
@@ -114,7 +112,7 @@ body {
     display: flex;
     align-items: center;
     color: #777777;
-    font-size: 5vh;
+    font-size: 2vw;
 }
 
 ::placeholder {
@@ -125,8 +123,14 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 20%;
     background-color: #31485a;
     color: #777777;
+}
+
+#customFile {
+    font-size: 2vw;
 }
 
 .modal-body {
@@ -158,7 +162,7 @@ body {
         #ff8008 100%
     );
     color: #232f3e;
-    font-size: 3vh;
+    font-size: 2vw;
     height: 5vh;
     width: 30%;
 }
@@ -180,4 +184,13 @@ body {
 .input-key {
     margin: 2vh;
     height: 12vh;
+}
+
+.form-out {
+    background-color: #232f3e;
+    color: #f2e8dc;
+    height: 70%;
+    border-radius: 4vh;
+    margin-top: 10vh;
+    padding: 1vh;
 }
