@@ -5,11 +5,6 @@ body {
 }
 .main-nav {
     background-color: #232f3e;
-    display: flex;
-    height: 70px;
-
-    padding-left: 70px;
-    padding-right: 70px;
 }
 .nnav {
     display: flex;
@@ -26,10 +21,10 @@ body {
     color: #f2e8dc;
 }
 .info {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
 }
 .achie-title {
     color: black;
@@ -55,7 +50,7 @@ tr {
     position: absolute;
 }
 .news-in {
-    background-color: #31485A;
+    background-color: #31485a;
     color: #f2e8dc;
     height: calc(100% - 71px);
     margin: 0px;
@@ -118,7 +113,7 @@ tr {
     align-items: center;
 }
 .btn-unfocus {
-    background-color: #31485A !important;
+    background-color: #31485a !important;
     color: #f2e8dc !important;
     height: 8vh;
     display: flex !important;
@@ -139,8 +134,8 @@ tr {
     justify-content: flex-start;
 }
 .form-control {
-    border-color: #31485A !important;
-    background-color: #31485A !important;
+    border-color: #31485a !important;
+    background-color: #31485a !important;
     padding-left: 0px !important;
     color: #f2e8dc !important;
     height: 8vh !important;
@@ -149,14 +144,17 @@ tr {
     color: #f2e8dc !important;
     opacity: 1;
 }
-.material-icons {
+.material-icons2 {
     width: 38px;
     color: #f2e8dc;
-    background-color: #31485A;
+    background-color: #31485a;
     display: flex !important;
     justify-content: center;
     align-items: center;
     height: 8vh;
+}
+.temp {
+    background-color: #212529 !important;
 }
 .form-check {
     display: flex !important;
@@ -178,7 +176,7 @@ tr {
     display: flex !important;
     justify-content: center;
     align-items: center;
-}   
+}
 #div-login-signup {
     display: flex;
     justify-content: center;

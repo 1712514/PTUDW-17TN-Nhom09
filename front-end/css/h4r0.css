@@ -5,11 +5,6 @@ body {
 }
 .main-nav {
     background-color: #232f3e;
-    display: flex;
-    height: 70px;
-
-    padding-left: 70px;
-    padding-right: 70px;
 }
 .nnav {
     display: flex;
@@ -103,12 +98,10 @@ body {
     color: #f2e8dc;
 }
 
-
 .input-form[type="text"]:focus {
     background-color: #31485a;
     color: #f2e8dc;
 }
-
 
 .input-row {
     height: 20%;
@@ -116,9 +109,9 @@ body {
 }
 
 #input-label {
-    height: 100%; 
-    background-color: #31485a; 
-    display: flex; 
+    height: 100%;
+    background-color: #31485a;
+    display: flex;
     align-items: center;
     color: #777777;
     font-size: 5vh;
@@ -136,7 +129,7 @@ body {
     color: #777777;
 }
 
-.modal-body{
+.modal-body {
     display: flex;
     background-color: #232f3e;
     color: #f2e8dc;

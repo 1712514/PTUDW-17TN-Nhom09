@@ -9,81 +9,148 @@
         />
         <link rel="stylesheet" href="../css/mjhw4n.css" />
         <!-- Bootstrap CSS -->
-        <link rel="icon" href="../resource/WebIcon.png">
+        <link rel="icon" href="../resource/WebIcon.png" />
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
             crossorigin="anonymous"
         />
-
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
         <title>Trang chủ</title>
     </head>
     <body>
         <div class="container-fluid">
             <!-- navibar -->
-            <div class="row main-nav">
-                <ul class="nnav col">
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="Shomepage.html">
-                            <img
-                                src="../resource/LogoIcon.png"
-                                width="70"
-                                height="60"
-                                class="d-inline-block align-top"
-                                alt="Logo"
-                                loading="lazy"
-                            />
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nnav col justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link font-white" href="Sprofile.html"
-                            >Thông tin</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-white" href="login.html"
-                            >Đăng xuất</a
-                        >
-                    </li>
-                </ul>
-            </div>
+            <nav class="navbar navbar-expand-lg main-nav fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="Shomepage.html">
+                        <img
+                            src="../resource/LogoIcon.png"
+                            width="70"
+                            height="60"
+                            class="d-inline-block align-top"
+                            alt="Logo"
+                            loading="lazy"
+                        />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="material-icons font-white">
+                            menu
+                        </span>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarTogglerDemo02"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link font-white"
+                                    href="Sprofile.html"
+                                    >Thông tin</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link font-white" href="login.html"
+                                    >Đăng xuất</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div style="height: 70px;"></div>
             <!-- Content of site-->
             <div class="container-fluid">
-              <div class="row my-5 justify-content-betwen">
-                <!-- 3 cards -->
-                <div class="row col-lg-8 col-sm-8">
-                  <div class="card col-lg col-sm-12">
-                    <img src="../resource/homepage-test.jpg" class="card-img-top" alt="..." style="margin-top: 10px">
-                    <div class="card-body">
-                      <p class="card-text">Thi thử tính giờ làm bài các môn Toán, Văn, Lý, Hóa, Sử, Địa...</p>
-                      <a href="../html/Ssearchtest.html" class="btn btn-warning">Làm thử bài thi</a>
+                <div class="row my-5 justify-content-betwen">
+                    <!-- 3 cards -->
+                    <div class="row col-lg-8 col-sm-8">
+                        <div class="card col-lg col-sm-12">
+                            <img
+                                src="../resource/homepage-test.jpg"
+                                class="card-img-top"
+                                alt="..."
+                                style="margin-top: 10px;"
+                            />
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Thi thử tính giờ làm bài các môn Toán, Văn,
+                                    Lý, Hóa, Sử, Địa...
+                                </p>
+                                <a
+                                    href="../html/Ssearchtest.html"
+                                    class="btn btn-warning"
+                                    >Làm thử bài thi</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="card col-lg col-sm-12"
+                            style="margin-left: 10px;"
+                        >
+                            <img
+                                src="../resource/homepage-review.jpg"
+                                class="card-img-top"
+                                alt="..."
+                                style="margin-top: 10px;"
+                            />
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Làm bài ôn tập theo từng chuyên đề, cải
+                                    thiện riêng những phần còn yếu.
+                                </p>
+                                <a
+                                    href="../html/Ssearchreview.html"
+                                    class="btn btn-warning"
+                                    >Luyện chuyên đề</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="card col-lg col-sm-12"
+                            style="margin-left: 10px;"
+                        >
+                            <img
+                                src="../resource/homepage-event.jpg"
+                                class="card-img-top"
+                                alt="..."
+                                style="margin-top: 10px;"
+                            />
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Tham gia cuộc thi trực tiếp do các thầy cô
+                                    ra đề.
+                                </p>
+                                <a
+                                    href="../html/Sevent.html"
+                                    class="btn btn-warning"
+                                    >Tham gia cuộc thi</a
+                                >
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="card col-lg col-sm-12" style="margin-left: 10px;">
-                    <img src="../resource/homepage-review.jpg" class="card-img-top" alt="..." style="margin-top: 10px;">
-                    <div class="card-body">
-                      <p class="card-text">Làm bài ôn tập theo từng chuyên đề, cải thiện riêng những phần còn yếu.</p>
-                      <a href="../html/Ssearchreview.html" class="btn btn-warning">Luyện chuyên đề</a>
+                    <!-- news -->
+                    <div
+                        class="col-lg-4 col-sm-12 news-out rounded"
+                        style="margin-left: 10px;"
+                    >
+                        <h1 class="news-title">Bảng tin</h1>
+                        <ul class="news-in col-12 rounded" id="news-board"></ul>
                     </div>
-                  </div>
-                  <div class="card col-lg col-sm-12" style="margin-left: 10px;">
-                    <img src="../resource/homepage-event.jpg" class="card-img-top" alt="..." style="margin-top: 10px">
-                    <div class="card-body">
-                      <p class="card-text">Tham gia cuộc thi trực tiếp do các thầy cô ra đề.</p>
-                      <a href="../html/Sevent.html" class="btn btn-warning">Tham gia cuộc thi</a>
-                    </div>
-                  </div>
                 </div>
-                <!-- news -->
-                <div class="col-lg-4 col-sm-12 news-out rounded" style="margin-left: 10px;">
-                  <h1 class="news-title">Bảng tin</h1>
-                  <ul class="news-in col-12 rounded" id="news-board">
-                  </ul>
-                </div>
-              </div>
             </div>
         </div>
 
