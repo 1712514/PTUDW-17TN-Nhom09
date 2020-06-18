@@ -148,6 +148,7 @@ h1{
 button.rounded-lg{
   color: #232f3e;
   background-image: linear-gradient(to bottom right,#FF8008,#FFC837) !important;
+  border-radius: 20px !important;
 }
 
 div.btn-group{
@@ -179,14 +180,26 @@ a.col-2{
     border-radius: 10px !important;
   } 
 
+a.active{
+  border: solid 0.2em;
+  border-color: black;
+}
 
-div.col-8 div {
-    height: 600px;
-  }
+.sideBar{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tb_question{
+  top:400px;
+}
 
 .infoSection{
     position: fixed;
-    top:200px;
+    top:150px;
     display: flex;
 
     flex-direction: column;
@@ -194,7 +207,6 @@ div.col-8 div {
     align-items: center;
 
   }
-
   /*---------------Timer------------------*/
   
 
@@ -227,6 +239,80 @@ span {
 
 /*----------------Question----------------*/
 .background {
+  height: 500px;
   background-color: rgba(35, 47, 62, 0.8) !important;
   color: #f2e8dc;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.image-test{
+  width: 100%;
+}
+
+.question{
+  padding: 30px !important;
+}
+
+.emptySpace{
+  height: 200px;
+  background-color: white !important;
+}
+.wrong{
+  color: red !important;
+}
+
+.resultBoard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(35, 47, 62, 0.8) !important;
+  color: white !important;
+  width: 250px;
+}
+/*----------------Hint for Questions----------------*/
+.hint {
+  position: relative;
+  height: 300px;
+  margin: 20px;
+  padding: 20px;
+  perspective: 1000px;
+}
+.flip-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card.is-flipped {
+  transform: rotateY(180deg);
+}
+.card-front,.card-back {
+  display: flex;
+  color: #232f3e;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 128, 8, 1) 0%,
+      rgba(255, 200, 55, 1) 100%
+  );
+}
+.card-front {
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 10px;
+  overflow: auto;
+
 }

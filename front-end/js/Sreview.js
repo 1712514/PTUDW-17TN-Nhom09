@@ -16,4 +16,4 @@ for (let i = 0; i < radio.length; ++i) {
             this.parentNode.children[1].style.color = "red";
         }
     });
-}  
+}

@@ -24,14 +24,14 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <title>Luyện đề</title>
+        <title>Luyện đề - Làm đề  thi thử</title>
     </head>
     <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
         <div class="container-fluid fixed-top test">
             <div class="row main-nav">
                 <ul class="nnav col">
                     <li class="nav-item">
-                        <a class="navbar-brand" href="Thomepage.html">
+                        <a class="navbar-brand" href="Shomepage.html">
                             <img
                                 src="../resource/LogoIcon.png"
                                 width="70"
@@ -74,66 +74,46 @@
         <div>
           <div class="container-fluid">
             <div class="row">
-              <nav class="col-sm-3 col-4" id="myScrollspy">
-                <div class="infoSection">
-                    <div id="timer">
-                        <div class="timer" id="hours"></div>
-                        <div class="timer" id="minutes"></div>
-                        <div class="timer" id="seconds"></div>
-                      </div>
-                  <button type="button" class="btn btn-danger ">Submit</button>
-                </div>
-                <div style="height: 400px;"></div>
-                
-                  <div class="row nav-pills">
-                    <a class="nav-link active col-2" href="#section1">Cau 1</a>
-                    <a class="nav-link col-2" href="#section2">Cau 2</a>
-                    <a class="nav-link col-2" href="#section3">Cau 3</a>
-                    <a class="nav-link col-2" href="#section4">Cau 4</a>
-                    <a class="nav-link col-2" href="#section5">Cau 5</a>
-                    <a class="nav-link col-2" href="#section6">Cau 6</a>
-                    <a class="nav-link col-2" href="#section7">Cau 7</a>
-                    <a class="nav-link col-2" href="#section8">Cau 8</a>
-                    <a class="nav-link col-2" href="#section9">Cau 9</a>
-                    <a class="nav-link col-2" href="#section10">Cau 10</a>
-                    <a class="nav-link col-2" href="#section11">Cau 11</a>
-                    <a class="nav-link col-2" href="#section12">Cau 12</a>
-                  </div>
-              </nav>
+                <nav class="col-sm-3 col-4 sideBar" id="myScrollspy">
+                    <div class="infoSection">
+                        <div id="timer">
+                            <div class="timer" id="hours"></div>
+                            <div class="timer" id="minutes"></div>
+                            <div class="timer" id="seconds"></div>
+                        </div>
+
+                        <button type="button" class="btn btn-danger " id="Submit" data-toggle ="modal" data-target="#myModal">Submit</button>
+
+                        <div class="collapse" id="boxnoidung">
+                            <div class="card card-body resultBoard">
+                                <p class="card-text">Điểm</p>
+                                <h1 class="card-text" id="point"></h1>
+                                <p class="card-text" id="numberOfCorrect"></p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="row nav-pills" id="tb_question"> </div>
+                </nav>
               
-              <div class="col-sm-8 col-8">
-                <div id="section1" class="background" >    
-                  <div style="height: 200px; background-color: white !important;"></div>
-                  
-                  <h3>Câu 1: Trong tự nhiên hidro chủ yếu tồn tại 2 đồng vị 11H và 12H (còn gọi là đơteri, kí hiệu là D). Nước tự nhiên tồn tại dạng nước bán nặng (HOD) và nước thường (H2O). Để tách được 1 gam nước bán nặng cần lấy bao nhiêu gam nước tự nhiên? Cho biết nguyên tử khối của oxi là 16, nguyên tử khối của hidro là 1,008.</h3>
-
-                  <form action="">
-                    <input type="radio" name="choice" value="a"> A. 17,86 gam<br>
-                    <input type="radio" name="choice" value="b"> B. 55,55 gam<br>
-                    <input type="radio" name="choice" value="c"> C. 125,05 gam<br>
-                    <input type="radio" name="choice" value="d"> D. 118,55 gam<br>
-                  </form>
-
-                </div>
-                <div id="section2" class="background"> 
-                  <div style="height: 200px; background-color: white !important;"></div>    
-                  
-
-                </div>        
-                <div id="section3" class="background">         
-                  <div style="height: 200px; background-color: white !important;"></div>
-
-                </div>
-                <div id="section4" class="background">   
-                  <div style="height: 200px; background-color: white !important;"></div>      
-                  
-                </div>      
-                <div id="section5" class="background">         
-                  <div style="height: 200px; background-color: white !important;"></div>
-                  
-                </div>
+              <div class="col-sm-9 col-9" id ="questionSection"> </div>
               </div>
             </div>
+
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body text-center mb-5">
+                      <h1 id ="notification">Bạn chắc chắn muốn nộp bài chứ?</h1>
+                      <div class="btn-group" id="abc">
+                            <button type="button" class="btn btn-secondary btn-lg mr-2 rounded-lg" data-dismiss="modal" id="cancel">Hủy</button>
+                            <button type="button" class="btn btn-success btn-lg rounded-lg" id="theEnd" data-dismiss="modal" data-toggle="collapse" data-target="#boxnoidung">Nộp bài</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
           </div>  
         </div>
         <!-- Optional JavaScript -->
