@@ -5,7 +5,7 @@ body {
 }
 .background {
     background-color: rgba(35, 47, 62, 0.8) !important;
-    color: #f2e8dc;
+    color: #f2e8dc; 
 }
 .main-nav {
     background-color: #232f3e;

@@ -32,8 +32,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <title>Luyện đề - Làm đề thi thử</title>
     </head>
-    <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
-        <div class="container-fluid fixed-top test">
+    <body >
+        <div class="container-fluid test">
             <nav class="navbar navbar-expand-lg main-nav fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="Shomepage.html">
@@ -104,11 +104,22 @@
                     </div>
                 </div>
             </nav>
-            <div style="height: 70px;"></div>
-            <div>
+            <div style="height: 130px;"></div>
+            <div class="res01" id="res01">
+                <button
+                        id="showInfo"
+                        class="navbar-toggler fixed-top"
+                        type="button"
+                    >
+                        <span class="material-icons">
+                            more_horiz
+                        </span>
+                    </button>
+            </div>
+            <div >
                 <div class="container-fluid">
-                    <div class="row">
-                        <nav class="col-sm-3 col-4 sideBar" id="myScrollspy">
+                    <div class="row" id="Bbox">
+                        <nav class="navbar-expand-md col-lg-3 col-xl-3 sideBar" id="myScrollspy">
                             <div class="infoSection">
                                 <div id="timer">
                                     <div class="timer" id="hours"></div>
@@ -118,12 +129,12 @@
 
                                 <button
                                     type="button"
-                                    class="btn btn-danger"
+                                    class="btn btn-warning"
                                     id="Submit"
                                     data-toggle="modal"
                                     data-target="#myModal"
                                 >
-                                    Submit
+                                Nộp bài
                                 </button>
 
                                 <div class="collapse" id="boxnoidung">
@@ -141,7 +152,11 @@
                             <div class="row nav-pills" id="tb_question"></div>
                         </nav>
 
-                        <div class="col-sm-9 col-9" id="questionSection"></div>
+                        <div class="col-md-12 col-lg-9 col-xl-9" id="Bquestion">
+                            <div class="frame-question" id="questionSection" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -152,7 +167,7 @@
                                 <h1 id="notification">
                                     Bạn chắc chắn muốn nộp bài chứ?
                                 </h1>
-                                <div class="btn-group" id="abc">
+                                <div class="btn-group">
                                     <button
                                         type="button"
                                         class="btn btn-secondary btn-lg mr-2 rounded-lg"

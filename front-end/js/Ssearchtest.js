@@ -35,7 +35,7 @@ $(document).ready(function(){
     for(var t = 0;t<tests.length;t++){
         $("<button/>",{
             "type":"button",
-            "class":"col-2 btn testBtn",
+            "class":"col-md-10 col-lg-2 col-xl-2  btn testBtn",
             "id":tests[t].id,
             "data-toggle":"modal",
             "data-target":"#myModal",
@@ -74,6 +74,17 @@ $(document).ready(function(){
             });
         }
     }
+
+    $(window).resize(function() {     
+        if($(window).width() <= 1100){
+            var temp = $(window).width()*0.85;
+            $(".dropdown-content").css({'cssText': 'min-width: '+ temp.toString()+'px !important'});
+        }
+        else{
+            $(".dropdown-content").css({'cssText': 'min-width: 1080px !important'});
+
+        }
+        });
 });
 
 //function use to filter infomation

@@ -74,4 +74,15 @@ $(document).ready(function(){
             }
         });
     }
+
+    $(window).resize(function() {     
+        if($(window).width() <= 1100){
+            var temp = $(window).width()*0.85;
+            $(".dropdown-content").css({'cssText': 'min-width: '+ temp.toString()+'px !important'});
+        }
+        else{
+            $(".dropdown-content").css({'cssText': 'min-width: 1080px !important'});
+
+        }
+        });
 });

@@ -277,12 +277,14 @@ var x = setInterval(function() {
       
   }, 1000);
 
-
-window.addEventListener("beforeunload", function(event) {
+//checking users leave webpage
+/*window.addEventListener("beforeunload", function(event) {
     event.returnValue = "Bài thi chưa hoàn thành! Bạn vẫn muốn rời đi chứ?";
-  });
+  });*/
 
+//Load data into web page
 $(document).ready(function(){
+  $("#res01").hide();
 
     for(var i = 0;i<questions.length;i++){
 
@@ -296,15 +298,16 @@ $(document).ready(function(){
       }
 
       $("<div/>",{
-        "class":"background",
+        "class":"frame",
         "id":"section" + i.toString(),
       }).appendTo("#questionSection");
+      if(i !=0){
+        $("<div/>",{"class":"emptySpace"}).appendTo("#section"+i.toString());
+      }
 
-      $("<div/>",{"class":"emptySpace"}).appendTo("#section"+i.toString());
+      $("<div/>",{"class":"row background","id":"s01_" + i.toString()}).appendTo("#section"+i.toString());
 
-      $("<div/>",{"class":"row","id":"s01_" + i.toString()}).appendTo("#section"+i.toString());
-
-      $("<div/>",{"class":"col-10 question","id":"s02_"+i.toString()}).appendTo("#s01_"+i.toString());
+      $("<div/>",{"class":"col-md-9 col-lg-9 col-xl-9 question","id":"s02_"+i.toString()}).appendTo("#s01_"+i.toString());
 
       $("<p/>",{text:questions[i].order +": "+ questions[i].question}).appendTo("#s02_"+i.toString());
 
@@ -331,7 +334,7 @@ $(document).ready(function(){
             break;
         }
       }
-      $("<div/>",{"class":"col-2 image","id":"image_"+i.toString()}).appendTo("#s01_"+i.toString());
+      $("<div/>",{"class":"col-md-2 col-lg-2 col-xl-2 image","id":"image_"+i.toString()}).appendTo("#s01_"+i.toString());
       $("<img/>",{"class":"image-test","src":"../resource/homepage-review.jpg","alt":"abc"}).appendTo("#image_"+i.toString())
       if(i == questions.length-1){
         $("<div/>",{"class":"emptySpace", "id" :"endSection"}).appendTo("#section"+i.toString());
@@ -345,7 +348,7 @@ $(document).ready(function(){
         var id = this.getAttribute("id");
       if($("#" + id).is(":checked")){
         
-        $("#sec"+id.slice(19,id.length)).css("background-color", "#99FF33");
+        $("#sec"+id.slice(19,id.length)).css("background-color", "#6eab32");
         localStorage.setItem("cau" + id.slice(19,id.length),id.slice(17,19));
       }
     });
@@ -356,10 +359,16 @@ $(document).ready(function(){
         showResult();
     });
     });
+    if($(window).width() < 1730){
+      respon_timeTable();
+    }
+
+    $(window).resize(function(){respon_timeTable();});
 });
 
-
+//show result of the test after submit or run out of time
 function showResult(){
+  console.log("test");
   $("#timer").remove();
   $("#Submit").remove();
   $("#endSection").remove();
@@ -367,7 +376,7 @@ function showResult(){
   $("input:radio[name=optradio]").attr("disabled",true);
   for(var i = 0;i<questions.length;i++){
     if(questions[i].answer != String.fromCharCode(parseInt(localStorage.getItem("cau" + i.toString())))){
-      $("#sec" + i.toString()).css("background-color", "red");
+      $("#sec" + i.toString()).css("background-color", "#a02424");
       numberOfCorrect--;
       if(localStorage.getItem("cau" + i.toString()) != null){
         $("#" + localStorage.getItem("cau" + i.toString()) + i.toString()).css("color","red");
@@ -381,13 +390,14 @@ function showResult(){
     $("<div/>",{"class":"hint","id":"hint_" + i.toString()}).appendTo("#section"+i.toString());
     $("<div/>",{"class":"flip-card","id":"hintCard_" + i.toString()}).appendTo("#hint_"+i.toString());
     $("<div/>",{"class":"card-front","id":"front_"+i.toString(),text:"Nhấn để xem gợi ý bài giải"}).appendTo("#hintCard_" + i.toString());
-    $("<div/>",{"class":"card-back","id":"back_"+i.toString(),text:"Ở đây chứa gợi ý bài giải! Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS ndonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế ndonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế  bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế."}).appendTo("#hintCard_" + i.toString());
+    $("<div/>",{"class":"card-back","id":"back_"+i.toString()}).appendTo("#hintCard_" + i.toString());
+    $("<p/>",{text:"Ở đây chứa gợi ý bài giải! Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS ndonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế ndonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế  bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế."}).appendTo("#back_" + i.toString());
 
     $("#hintCard_"+i.toString()).click(function(){
       $(this).toggleClass("is-flipped");
     });
 
-    $("#section"+i.toString()).css("height","800px");
+    //$("#section"+i.toString()).css("height","800px");
 
     if(i == questions.length-1){
       $("<div/>",{"class":"emptySpace"}).appendTo("#section"+i.toString());
@@ -398,7 +408,46 @@ function showResult(){
 
   $("#point").text(point.toString());
   $("#numberOfCorrect").text("Số câu đúng: " + numberOfCorrect.toString() + " / " + questions.length.toString());
-  
 }
 
 
+function respon_timeTable() {    
+  var temp = $(window).width();
+  
+  var temp1 = $("#myScrollspy");
+  if(temp < 1730 ){
+    $("#res01").show();
+    $("#myScrollspy").remove()
+    temp1.appendTo("#res01");
+    $("#myScrollspy").addClass("modal");
+    $("#tb_question").hide();
+    
+    $("#showInfo").click(function(){
+     
+      if($( "#myScrollspy").is( ":hidden" )){
+        
+        $("#myScrollspy").modal('show');
+        $("#hours").css({'font-size':'80px'});
+        $("#minutes").css({'font-size':'70px'});
+
+        $("#Submit").click(function(){
+          $("#theEnd").bind('click',function(){
+            showResult();
+            $(".card").css({'margin-left':'50px','margin-top':'100px'});
+          });
+        });
+      }
+      else{
+        $("#myScrollspy").modal('hide');
+      }
+
+    });
+  }
+  else if(temp >= 1730 ){
+    $("#res01").hide();
+    temp1.removeClass("modal");
+    temp1.show()
+    $("#tb_question").show();
+    $("#Bbox").prepend(temp1);
+  }
+}

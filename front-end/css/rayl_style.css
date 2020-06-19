@@ -6,7 +6,7 @@ body {
     background-image: url("../resource/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
+    /*position: relative;*/
     margin: 0 auto;
     font-weight: 100;
 
@@ -29,10 +29,11 @@ body {
     color: #f2e8dc;
 }
 
+
 /*------------------------Ssearchtest-Ssearchreview---------------------------*/
 
 .testBtn{
-    margin: 62px !important;
+    margin: 3.3%;
     min-height: 200px;
     font-size: 25px !important;
     min-width: 350px; 
@@ -111,7 +112,7 @@ body {
     z-index: 1;
     border-radius: 5px;
   }
-  
+
 .dropdown:hover .dropdown-content {
     display: block;
   }
@@ -160,7 +161,7 @@ div.nav-pills {
     position: fixed;
     width: 450px;
     display: flex;
-    
+    margin-left: 0.1%;
     justify-content: center;
     align-items: center;
     
@@ -170,7 +171,7 @@ a.col-2{
     margin: 5px;
     padding: 5px !important;
     color:white;
-    background-color:rgba(236, 190, 89, 0.8);
+    background-color:rgba(255, 128, 8, 0.8);
     text-align: center;
     border-radius: 10px !important;
   } 
@@ -182,10 +183,11 @@ a.active{
 
 .sideBar{
   display: flex;
-
+  background-color: rgba(35, 47, 62, 0.8) !important;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
+  border-radius: 0.5rem;
 }
 
 #tb_question{
@@ -202,6 +204,16 @@ a.active{
     align-items: center;
 
   }
+button.btn-warning{
+  color: #232f3e !important;
+}
+
+.res01{
+  top:
+}
+#showInfo{
+  top: 90px;
+}
   /*---------------Timer------------------*/
   
 
@@ -233,29 +245,44 @@ span {
 }
 
 /*----------------Question----------------*/
+.frame-question{
+  position: relative;
+  overflow-y: scroll;
+  height:  850px !important;
+}
+.frame-question::-webkit-scrollbar { 
+  display: none; 
+} 
+.frame{
+  height: auto ;
+}
+
 .background {
-  height: 500px;
   background-color: rgba(35, 47, 62, 0.8) !important;
   color: #f2e8dc;
+  width: 100%;
 }
 .image {
   display: flex;
   justify-content: center;
+  padding: 1%;
 }
 .image-test{
   width: 100%;
+  margin-left: 5%;
 }
 
 .question{
-  padding: 30px !important;
+  padding: 2% !important;
+  margin-left: 6%;
 }
 
 .emptySpace{
-  height: 200px;
-  background-color: white !important;
+  height: 100px;
+  background-color:rgba(255, 255, 255, 0) !important;
 }
 .wrong{
-  color: red !important;
+  color: rgb(230, 79, 79) !important;
 }
 
 .resultBoard{
@@ -270,8 +297,8 @@ span {
 .hint {
   position: relative;
   height: 300px;
-  margin: 20px;
-  padding: 20px;
+  margin: 1%;
+  padding: 1%;
   perspective: 1000px;
 }
 .flip-card {
@@ -302,12 +329,13 @@ span {
       rgba(255, 200, 55, 1) 100%
   );
 }
-.card-front {
-}
 
 .card-back {
   transform: rotateY(180deg);
-  padding: 10px;
+  padding: 1%;
   overflow: auto;
-
 }
+
+.card-back::-webkit-scrollbar { 
+  display: none; 
+} 
