@@ -291,10 +291,10 @@ $(document).ready(function(){
       localStorage.setItem("cau"+i.toString(),null);
 
       if(i == 0){
-        $("<a/>",{"class":"nav-link active col-2","id":"sec0","href":"#section" + i.toString(),text:questions[i].order}).appendTo("#tb_question");
+        $("<a/>",{"class":"nav-link active Bques col-md-2 col-lg-2 col-xl-2","id":"sec0","href":"#section" + i.toString(),text:questions[i].order}).appendTo("#tb_question");
       }
       else{
-        $("<a/>",{"class":"nav-link col-2","id":"sec"+i.toString(),"href":"#section" + i.toString(),text:questions[i].order}).appendTo("#tb_question");
+        $("<a/>",{"class":"nav-link Bques col-md-2 col-lg-2 col-xl-2","id":"sec"+i.toString(),"href":"#section" + i.toString(),text:questions[i].order}).appendTo("#tb_question");
       }
 
       $("<div/>",{
@@ -412,15 +412,16 @@ function showResult(){
 
 
 function respon_timeTable() {    
-  var temp = $(window).width();
+
+  var widthSreen = $(window).width();
   
   var temp1 = $("#myScrollspy");
-  if(temp < 1730 ){
+  if(widthSreen < 1250 ){
     $("#res01").show();
     $("#myScrollspy").remove()
     temp1.appendTo("#res01");
     $("#myScrollspy").addClass("modal");
-    $("#tb_question").hide();
+      $("#tb_question").hide();
     
     $("#showInfo").click(function(){
      
@@ -443,7 +444,9 @@ function respon_timeTable() {
 
     });
   }
-  else if(temp >= 1730 ){
+  else if(widthSreen >= 1250 ){
+    
+
     $("#res01").hide();
     temp1.removeClass("modal");
     temp1.show()
