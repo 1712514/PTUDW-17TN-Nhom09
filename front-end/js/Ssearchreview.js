@@ -36,7 +36,7 @@ $(document).ready(function(){
     for(var t = 0;t<Thematics.length;t++){
         $("<button/>",{
             "type":"button",
-            "class":"col-2 btn testBtn",
+            "class":"col-md-10 col-lg-2 col-xl-2 btn testBtn",
             "id":Thematics[t].id,
             "data-toggle":"modal",
             "data-target":"#myModal",
