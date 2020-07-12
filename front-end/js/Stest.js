@@ -305,7 +305,7 @@ $(document).ready(function(){
         $("<div/>",{"class":"emptySpace"}).appendTo("#section"+i.toString());
       }
 
-      $("<div/>",{"class":"row background","id":"s01_" + i.toString()}).appendTo("#section"+i.toString());
+      $("<div/>",{"class":"row background-T","id":"s01_" + i.toString()}).appendTo("#section"+i.toString());
 
       $("<div/>",{"class":"col-md-9 col-lg-9 col-xl-9 question","id":"s02_"+i.toString()}).appendTo("#s01_"+i.toString());
 
@@ -334,8 +334,8 @@ $(document).ready(function(){
             break;
         }
       }
-      $("<div/>",{"class":"col-md-2 col-lg-2 col-xl-2 image","id":"image_"+i.toString()}).appendTo("#s01_"+i.toString());
-      $("<img/>",{"class":"image-test","src":"../resource/homepage-review.jpg","alt":"abc"}).appendTo("#image_"+i.toString())
+      $("<div/>",{"class":"col-md-2 col-lg-2 col-xl-2 image-T","id":"image_"+i.toString()}).appendTo("#s01_"+i.toString());
+      $("<img/>",{"class":"image-test-T","src":"../resource/homepage-review.jpg","alt":"abc"}).appendTo("#image_"+i.toString())
       if(i == questions.length-1){
         $("<div/>",{"class":"emptySpace", "id" :"endSection"}).appendTo("#section"+i.toString());
       }
@@ -387,10 +387,10 @@ function showResult(){
       $("#" + localStorage.getItem("cau" + i.toString()) + i.toString()).css("color","#CCFF00");
     }
 
-    $("<div/>",{"class":"hint","id":"hint_" + i.toString()}).appendTo("#section"+i.toString());
+    $("<div/>",{"class":"hint-T","id":"hint_" + i.toString()}).appendTo("#section"+i.toString());
     $("<div/>",{"class":"flip-card","id":"hintCard_" + i.toString()}).appendTo("#hint_"+i.toString());
-    $("<div/>",{"class":"card-front","id":"front_"+i.toString(),text:"Nhấn để xem gợi ý bài giải"}).appendTo("#hintCard_" + i.toString());
-    $("<div/>",{"class":"card-back","id":"back_"+i.toString()}).appendTo("#hintCard_" + i.toString());
+    $("<div/>",{"class":"card-front-T","id":"front_"+i.toString(),text:"Nhấn để xem gợi ý bài giải"}).appendTo("#hintCard_" + i.toString());
+    $("<div/>",{"class":"card-back-T","id":"back_"+i.toString()}).appendTo("#hintCard_" + i.toString());
     $("<p/>",{text:"Ở đây chứa gợi ý bài giải! Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS, để tiến hành đàm phán phân định ranh giới trên biển với Trung Quốc hoặc về bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế.Bởi vậy, Indonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế, đặc biệt là UNCLOS ndonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế ndonesia nhận thấy không có lý do pháp lý nào theo luật quốc tế  bất kỳ vấn đề nào khác liên quan đến quyền lợi hoặc lợi ích hàng hải được đưa ra trái với luật quốc tế."}).appendTo("#back_" + i.toString());
 
     $("#hintCard_"+i.toString()).click(function(){
