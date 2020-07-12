@@ -108,3 +108,193 @@ tr {
 .material-icons.md-48 {
     font-size: 48px;
 }
+/* Quan them */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+}
+.achie-title {
+    color: black;
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-weight: bold;
+}
+.achie-table {
+    background-color: rgba(35, 47, 62, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+.news-out {
+    background-color: #232f3e;
+    color: #f2e8dc;
+    height: 75vh;
+    border-radius: 4vh !important;
+    position: absolute;
+    padding: 1vh;
+}
+
+.news-in {
+    color: #f2e8dc;
+    border-radius: 3vh !important;
+    padding-bottom: 2vh;
+    list-style-type: none;
+    background-color: #31485a;
+    height: 90%;
+    border-radius: 3vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.news-in::-webkit-scrollbar {
+    display: none;
+}
+
+.news-title {
+    text-align: center;
+    font-size: 4vh;
+}
+.btn-create {
+    background-image: linear-gradient(
+        to right,
+        #ff8008 0%,
+        #ffc837 51%,
+        #ff8008 100%
+    );
+    margin-top: 30vh;
+    margin-right: 10vh;
+    width: 30vh;
+    height: 30vh;
+    color: #232f3e;
+    font-size: 4vh;
+}
+.news-in li {
+    margin: 3vh;
+    word-wrap: break-word;
+}
+
+.news-line {
+    font-size: 2vh;
+    color: #f2e8dc;
+}
+.homepage-box {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.card-quan {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    height: 70vh;
+}
+.card-img-top {
+    height: 40vh;
+}
+.card-text {
+    height: 10vh;
+}
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding-top: 32px;
+}
+.img-fluid {
+    padding: 30px;
+    height: 28vh !important;
+    width: 80%;
+}
+.btn-container {
+    margin: 0px !important;
+    background-color: #232f3e;
+    height: 8vh;
+}
+.btn-focus {
+    background-color: #232f3e !important;
+    color: #f2e8dc !important;
+    cursor: auto !important;
+    height: 8vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.btn-unfocus {
+    background-color: #31485a !important;
+    color: #f2e8dc !important;
+    height: 8vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    background-color: #232f3e;
+    height: 50vh;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 32px;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.form-control {
+    border-color: #31485a !important;
+    background-color: #31485a !important;
+    padding-left: 0px !important;
+    color: #f2e8dc !important;
+    height: 8vh !important;
+}
+.form-control::placeholder {
+    color: #f2e8dc !important;
+    opacity: 1;
+}
+.material-icons2 {
+    width: 38px;
+    color: #f2e8dc;
+    background-color: #31485a;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
+.temp {
+    background-color: #212529 !important;
+}
+.form-check {
+    display: flex !important;
+    justify-self: center;
+    height: 8vh !important;
+    margin: 0px !important;
+    padding-left: 0px !important;
+}
+.form-check-input {
+    align-self: center;
+    margin: 0px !important;
+    height: 8vh !important;
+}
+.form-check-label {
+    align-self: center;
+    color: #f2e8dc;
+    padding-left: 20px;
+    height: 8vh !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+#div-login-signup {
+    display: flex;
+    justify-content: center;
+}
+#btn-login-signup {
+    min-width: 50%;
+}
+.btn-shadow {
+    box-shadow: 0 4px 8px 0 rgba(255,193,7,0.4), 0 3px 10px 0 rgba(0,0,0,0.35);
+}
