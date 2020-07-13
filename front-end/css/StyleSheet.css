@@ -131,24 +131,24 @@ tr {
     text-align: center;
 }
 .news-out {
-    background-color: #232f3e;
-    color: #f2e8dc;
-    height: 75vh;
-    border-radius: 4vh !important;
-    position: absolute;
-    padding: 1vh;
+  background-color: #232f3e;
+  color: #f2e8dc;
+  height: 70vh;
+  border-radius: 4vh;
+  margin-top: 10vh;
+  padding: 1vh;
 }
 
 .news-in {
-    color: #f2e8dc;
-    border-radius: 3vh !important;
-    padding-bottom: 2vh;
-    list-style-type: none;
-    background-color: #31485a;
-    height: 90%;
-    border-radius: 3vh;
-    overflow: auto;
-    -ms-overflow-style: none;
+  color: #f2e8dc;
+  border-radius: 3vh;
+  padding-bottom: 2vh;
+  list-style-type: none;
+  background-color: #31485a;
+  height: 90%;
+  border-radius: 3vh;
+  overflow: auto;
+  -ms-overflow-style: none;
 }
 
 .news-in::-webkit-scrollbar {
@@ -267,22 +267,23 @@ tr {
 .temp {
     background-color: #212529 !important;
 }
-.form-check {
+.form-check-login {
     display: flex !important;
     justify-self: center;
     height: 8vh !important;
     margin: 0px !important;
     padding-left: 0px !important;
 }
-.form-check-input {
+.form-check-input-login {
     align-self: center;
     margin: 0px !important;
     height: 8vh !important;
 }
-.form-check-label {
+.form-check-label-login {
     align-self: center;
     color: #f2e8dc;
     padding-left: 20px;
+    margin: 0px !important;
     height: 8vh !important;
     display: flex !important;
     justify-content: center;
