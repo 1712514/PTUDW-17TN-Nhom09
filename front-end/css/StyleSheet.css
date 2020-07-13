@@ -231,7 +231,7 @@ tr {
     justify-content: center;
     align-items: center;
 }
-.form {
+.form-login {
     background-color: #232f3e;
     height: 50vh;
     display: flex !important;
