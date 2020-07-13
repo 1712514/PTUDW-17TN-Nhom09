@@ -244,14 +244,14 @@ tr {
     flex-direction: column;
     justify-content: flex-start;
 }
-.form-control {
+.form-control-login {
     border-color: #31485a !important;
     background-color: #31485a !important;
     padding-left: 0px !important;
     color: #f2e8dc !important;
     height: 8vh !important;
 }
-.form-control::placeholder {
+.form-control-login::placeholder {
     color: #f2e8dc !important;
     opacity: 1;
 }
@@ -530,74 +530,193 @@ span {
   height: auto ;
 }
 .background-T {
-    background-color: rgba(35, 47, 62, 0.8) !important;
-    color: #f2e8dc;
-    width: 100%;
-  }
-  .image-T {
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-  }
-  .image-test-T{
-    width: 100%;
-    margin-left: 5%;
-  }
-  
-  .question{
-    padding: 2% !important;
-    margin-left: 6%;
-  }
-  
-  .emptySpace{
-    height: 100px;
-    background-color:rgba(255, 255, 255, 0) !important;
-  }
-  .wrong{
-    color: rgb(230, 79, 79) !important;
-  }
-  
-  .resultBoard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(35, 47, 62, 0.8) !important;
-    color: white !important;
-    width: 250px;
-  }
-  /*----------------Hint for Questions----------------*/
-  .hint-T {
-    position: relative;
-    height: 300px;
-    margin: 1%;
-    padding: 1%;
-    perspective: 1000px;
-  }
+  background-color: rgba(35, 47, 62, 0.8) !important;
+  color: #f2e8dc;
+  width: 100%;
+}
+.image-T {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+.image-test-T{
+  width: 100%;
+  margin-left: 5%;
+}
 
-  .card-front-T,.card-back-T {
-    display: flex;
-    color: #232f3e;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    background-image: linear-gradient(
-        90deg,
-        rgba(255, 128, 8, 1) 0%,
-        rgba(255, 200, 55, 1) 100%
-    );
-  }
-  
-  .card-back-T {
-    transform: rotateY(180deg);
-    padding: 1%;
-    overflow: auto;
-  }
-  
-  .card-back-T::-webkit-scrollbar { 
-    display: none; 
-  } 
+.question{
+  padding: 2% !important;
+  margin-left: 6%;
+}
+
+.emptySpace{
+  height: 100px;
+  background-color:rgba(255, 255, 255, 0) !important;
+}
+.wrong{
+  color: rgb(230, 79, 79) !important;
+}
+
+.resultBoard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(35, 47, 62, 0.8) !important;
+  color: white !important;
+  width: 250px;
+}
+/*----------------Hint for Questions----------------*/
+.hint-T {
+  position: relative;
+  height: 300px;
+  margin: 1%;
+  padding: 1%;
+  perspective: 1000px;
+}
+
+.card-front-T,.card-back-T {
+  display: flex;
+  color: #232f3e;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 128, 8, 1) 0%,
+      rgba(255, 200, 55, 1) 100%
+  );
+}
+
+.card-back-T {
+  transform: rotateY(180deg);
+  padding: 1%;
+  overflow: auto;
+}
+
+.card-back-T::-webkit-scrollbar { 
+  display: none; 
+}
+/* Hảo Tevent Sevent Thomepage */
+.btn-create-event {
+  background-image: linear-gradient(
+      to right,
+      #ff8008 0%,
+      #ffc837 51%,
+      #ff8008 100%
+  );
+  margin-top: 7vh;
+  border-radius: 50px;
+  color: #232f3e;
+  font-size: 3vh;
+  height: 7vh;
+}
+
+.input-form[type="text"] {
+  background-color: #31485a;
+  font-size: 2vw;
+  color: #f2e8dc;
+}
+
+.input-form[type="text"]:focus {
+  background-color: #31485a;
+  color: #f2e8dc;
+}
+
+.input-row {
+  height: 20%;
+  margin: 2vw;
+}
+
+#input-label {
+  height: 100%;
+  background-color: #31485a;
+  display: flex;
+  align-items: center;
+  color: #777777;
+  font-size: 2vw;
+}
+
+::placeholder {
+  color: #777777;
+}
+
+#input-label.custom-file-label::after {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  background-color: #31485a;
+  color: #777777;
+}
+
+#customFile {
+  font-size: 2vw;
+}
+
+.modal-body {
+  display: flex;
+  background-color: #232f3e;
+  color: #f2e8dc;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  text-align: center;
+}
+
+.modal-content .modal-footer {
+  display: flex;
+  background-color: #232f3e;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-content {
+  height: 30vh;
+}
+
+.btn-confirm {
+  background-image: linear-gradient(
+      to right,
+      #ff8008 0%,
+      #ffc837 51%,
+      #ff8008 100%
+  );
+  color: #232f3e;
+  font-size: 2vw;
+  height: 5vh;
+  width: 30%;
+}
+
+.modal-footer .rounded {
+  border-radius: 3vh !important;
+}
+
+.out-key {
+  background-color: #232f3e;
+  color: #f2e8dc;
+  height: 20vh;
+  border-radius: 4vh;
+  margin-top: 30vh;
+  position: absolute;
+  padding: 2vh;
+}
+
+.input-key {
+  margin: 2vh;
+  height: 12vh;
+}
+
+.form-out {
+  background-color: #232f3e;
+  color: #f2e8dc;
+  height: 70%;
+  border-radius: 4vh;
+  margin-top: 10vh;
+  padding: 1vh;
+}
