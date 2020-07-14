@@ -157,7 +157,7 @@ tr {
 
 .news-title {
     text-align: center;
-    font-size: 4vh;
+    font-size: 4vh !important;
 }
 .btn-create {
     background-image: linear-gradient(
@@ -414,7 +414,7 @@ div.modal-content{
 .modal-header{
   border-bottom: 0px solid;
 }
-h1{
+h1.popup{
   padding: 20px;
 }
 button.rounded-lg{
