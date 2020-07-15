@@ -7,9 +7,9 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="stylesheet" href="/stylesheets/style.css" />
+        <link rel="stylesheet" href="../css/StyleSheet.css" />
         <!-- Bootstrap CSS -->
-        <link rel="icon" href="/resource/WebIcon.png" />
+        <link rel="icon" href="../resource/WebIcon.png" />
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -20,14 +20,14 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
-        <title>{{title}}</title>
+        <title>Thông tin giáo viên</title>
     </head>
+
     <body>
         <div class="container-fluid">
-            <!-- Navabar -->
             <nav class="navbar navbar-expand-lg main-nav fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="Thomepage">
+                    <a class="navbar-brand" href="Thomepage.html">
                         <img
                             src="../resource/LogoIcon.png"
                             width="70"
@@ -59,7 +59,7 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link font-white"
-                                    href="Tevent"
+                                    href="Tevent.html"
                                     >Cuộc thi</a
                                 >
                             </li>
@@ -68,12 +68,12 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link font-white"
-                                    href="Tprofile"
+                                    href="Tprofile.html"
                                     >Thông tin</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link font-white" href="https://uniez.herokuapp.com/"
+                                <a class="nav-link font-white" href="login.html"
                                     >Đăng xuất</a
                                 >
                             </li>
@@ -81,11 +81,49 @@
                     </div>
                 </div>
             </nav>
-            <div style="height: 70px;"></div>
-        {{{body}}}
+            <div style="height: 80px;"></div>
+            <!-- Content of site-->
+            <div class="container-fluid">
+                <div class="achie-title">
+                    <h1>Thông tin cá nhân</h1>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img
+                            id="avatar"
+                            src=""
+                            alt="Avatar"
+                            class="col-12 col-md-3 rounded float-left"
+                        />
+
+                        <div class="info col-12 col-md-9 h-75">
+                            <p id="nameinfo" class="my-0">
+                                <strong>Giáo viên: </strong>
+                            </p>
+                            <p id="emailinfo" class="my-0">
+                                <strong>Email: </strong>
+                            </p>
+                            <p id="passwordinfo" class="my-0">
+                                <strong>Password: **************</strong>
+                            </p>
+
+                            <div
+                                style="display: inline-block;"
+                                class="d-flex justify-content-end"
+                            >
+                                <button class="btn btn-warning btn-shadow">
+                                    Cập nhật
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../js/profile.js"></script>
         <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
