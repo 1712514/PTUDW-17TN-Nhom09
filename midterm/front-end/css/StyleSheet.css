@@ -425,9 +425,15 @@ button.rounded-lg{
 
 div.btn-group{
   display: flex;
-  justify-content: space-around;
 }
 
+.noneFlex{
+  display: block !important;
+}
+
+.configCard-text{
+  height: auto !important;
+}
   /*-------------------------Stest--------------------------------*/
 .test{
   margin: 0 auto;
