@@ -1,0 +1,74 @@
+<div style="height: 70px;"></div>
+<div class="container">
+    <div class="col">
+        <div class="col out-key">
+            <div class="form-group input-key">
+                <input
+                    type="text"
+                    class="form-control input-form"
+                    placeholder="Nhập key..."
+                    id="input-test-key"
+                />
+            </div>
+        </div>
+
+        <div class="row">
+            <button
+                type="button"
+                class="col-3 offset-2 btn-create-event"
+                onclick="relocateScoreboard()"
+            >
+                BXH
+            </button>
+            <button
+                type="button"
+                class="col-3 offset-2 btn-create-event"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                id="btn-start"
+            >
+                Thi
+            </button>
+        </div>
+
+        <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog" id="popup">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        Thời gian của cuộc thi đã kết thúc Bạn có
+                        muốn tiếp tục để xem BXH không?
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn-confirm rounded"
+                            data-dismiss="modal"
+                            onclick="relocateScoreboard()"
+                            id="btn-yes"
+                        >
+                            Có
+                        </button>
+                        <button
+                            type="button"
+                            class="btn-confirm rounded"
+                            data-dismiss="modal"
+                        >
+                            Không
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<script src="/javascripts/Sevent.js"></script>
