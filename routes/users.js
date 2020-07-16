@@ -22,9 +22,18 @@ router.get('/student/Stest', function(req, res, next) {
 router.get('/student/Sevent', function(req, res, next) {
   res.render('student/Sevent', { title: 'Luyện đề', layout:'student/student-layout' });
 });
+router.get('/student/Sreview', function(req, res, next) {
+  res.render('student/Sreview', { title: 'Luyện chuyên đề', layout:'student/student-layout' });
+});
+router.get('/student/Sscoreboard', function(req, res, next) {
+  res.render('student/Sscoreboard', { title: 'Bảng xếp hạng', layout:'student/student-layout' });
+});
 // Teacher
 router.get('/teacher/Thomepage', function(req, res, next) {
   res.render('teacher/Thomepage', { title: 'Trang chủ', layout:'teacher/teacher-layout' });
+});
+router.get('/teacher/Tscoreboard', function(req, res, next) {
+  res.render('teacher/Tscoreboard', { title: 'Bảng xếp hạng', layout:'teacher/teacher-layout' });
 });
 router.get('/teacher/Tprofile', function(req, res, next) {
   res.render('teacher/Tprofile', { title: 'Thông tin', layout:'teacher/teacher-layout' });
