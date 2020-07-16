@@ -1,0 +1,96 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+        <div class="test">
+            <div style="height: 130px;"></div>
+            <div class="res01" id="res01">
+                <button
+                        id="showInfo"
+                        class="navbar-toggler fixed-top"
+                        type="button"
+                    >
+                        <span class="material-icons">
+                            more_horiz
+                        </span>
+                    </button>
+            </div>
+            <div >
+                <div class="container-fluid">
+                    <div class="row" id="Bbox">
+                        <nav class="navbar-expand-md col-lg-3 col-xl-3 sideBar" id="myScrollspy">
+                            <div class="infoSection">
+                                <div id="timer">
+                                    <div class="timer" id="hours"></div>
+                                    <div class="timer" id="minutes"></div>
+                                    <div class="timer" id="seconds"></div>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-warning"
+                                    id="Submit"
+                                    data-toggle="modal"
+                                    data-target="#myModal"
+                                >
+                                Nộp bài
+                                </button>
+
+                                <div class="collapse" id="boxnoidung">
+                                    <div class="card card-body resultBoard">
+                                        <p class="configCard-text card-text">Điểm</p>
+                                        <h1 class="configCard-text card-text popup" id="point"></h1>
+                                        <p
+                                            class="configCard-text card-text"
+                                            id="numberOfCorrect"
+                                        ></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row nav-pills" id="tb_question"></div>
+                        </nav>
+
+                        <div class="col-md-12 col-lg-9 col-xl-9" id="Bquestion">
+                            <div class="frame-question" id="questionSection" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="noneFlex modal-body text-center mb-5">
+                                <h1 class="popup" id="notification">
+                                    Bạn chắc chắn muốn nộp bài chứ?
+                                </h1>
+                                <div class="btn-group">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary btn-lg mr-2 rounded-lg"
+                                        data-dismiss="modal"
+                                        id="cancel"
+                                    >
+                                        Hủy
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-success btn-lg rounded-lg"
+                                        id="theEnd"
+                                        data-dismiss="modal"
+                                        data-toggle="collapse"
+                                        data-target="#boxnoidung"
+                                    >
+                                        Nộp bài
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <script src="../js/Stest.js"></script>
