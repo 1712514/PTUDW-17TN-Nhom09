@@ -335,7 +335,7 @@ $(document).ready(function(){
         }
       }
       $("<div/>",{"class":"col-md-2 col-lg-2 col-xl-2 image-T","id":"image_"+i.toString()}).appendTo("#s01_"+i.toString());
-      $("<img/>",{"class":"image-test-T","src":"../resource/homepage-review.jpg","alt":"abc"}).appendTo("#image_"+i.toString())
+      $("<img/>",{"class":"image-test-T","src":"../resource/homepage-test.jpg","alt":"abc"}).appendTo("#image_"+i.toString())
       if(i == questions.length-1){
         $("<div/>",{"class":"emptySpace", "id" :"endSection"}).appendTo("#section"+i.toString());
       }
