@@ -43,7 +43,7 @@ $(document).ready(function(){
             text:Thematics[t].title,
             click: function(){
                 $("#startTest").bind('click',function(){
-                    location.replace("../html/Sreview.html");
+                    location.replace("Sreview");
                 });
             }
         }).appendTo("#testList");

@@ -42,7 +42,7 @@ $(document).ready(function(){
             text:tests[t].title,
             click: function(){
                 $("#startTest").bind('click',function(){
-                    location.replace("../html/Stest.html");
+                    location.replace("Stest");
                 });
             }
         }).appendTo("#testList");
