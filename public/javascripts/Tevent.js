@@ -8,7 +8,7 @@ function loadFilename() {
 }
 
 function relocateHomepage() {
-  location.href = "../html/Thomepage.html";
+  location.href = "../html/Thomepage?sid="+sessionStorage.getItem('sid');
 }
 
 function getEnter() {
