@@ -19,7 +19,7 @@ var news = [
 
 
 function relocate_create() {
-    location.href = "../teacher/Tevent";
+    location.href = "../teacher/tevent";
 }
 
 function show_news() {

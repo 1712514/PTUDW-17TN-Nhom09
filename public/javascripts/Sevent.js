@@ -1,5 +1,5 @@
 function relocateScoreboard() {
-  location.href = "../html/Sscoreboard.html";
+  location.href = "../student/sscoreboard";
 }
 
 function getStartKey() {
