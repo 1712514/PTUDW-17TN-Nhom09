@@ -19,11 +19,7 @@ var news = [
 
 
 function relocate_create() {
-<<<<<<< HEAD
-    location.href = "../teacher/tevent";
-=======
-    location.href = "../teacher/Tevent/?sid="+sessionStorage.getItem('sid');
->>>>>>> 484b6a657241c4b8cfa7372a03fe447fb2b8f24e
+    location.href = "../teacher/tevent?=sid"+sessionStorage.getItem('sid');
 }
 
 function show_news() {
