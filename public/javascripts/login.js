@@ -4,7 +4,13 @@ login_func = () => {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        
+        if (this.responseText == "fail"){
+          window.location.href = "https://uniez.herokuapp.com";
+        }
+        else {
+          // luu sid vao local storage de moi lan dang n
+          
+        }
       }
     };
     xhttp.open("POST", "/", true);
