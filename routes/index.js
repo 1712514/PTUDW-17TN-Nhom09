@@ -14,20 +14,22 @@ router.get('/signup', function(req, res, next) {
 // login
 router.post('/', function(req, res, next) {
   var user = req.body['user'];
-  var pass = req.body['user'];
-  // check login
-    // thanh cong
-      // sinh sid, hay key cm gi day, save vao db
-      // sai sid ve cho user luu local storage
-    // that bai
-      // gui ve chuoi "fail"
-
-  var check = true;
-  if (check){
-    res.send("sid"); // them username teacher
-  }
-  else {
-    res.send("fail");
-  }
+  var pass = req.body['pass'];
+  var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      if (this.responseText == "YES"){
+        res.send("sid"); // them username teacher
+      }
+      else {
+        res.send("fail");
+      }
+    }
+  };
+  var url = "http://192.168.1.166:8080/" + user + '&' + pass;
+  console.log(url);
+  xhttp.open("GET", url , true);
+  xhttp.send();
 });
 module.exports = router;
