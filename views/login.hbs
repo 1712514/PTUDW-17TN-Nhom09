@@ -84,6 +84,7 @@
                                     aria-label="Username"
                                     aria-describedby="basic-addon1"
                                     onkeypress="key_press(event)"
+                                    name="user"
                                 />
                             </div>
                             <div class="input-group mb-3">
@@ -94,12 +95,14 @@
                                     >
                                 </div>
                                 <input
+                                    id="password-input"
                                     type="password"
                                     class="form-control form-control-login"
                                     placeholder="Mật khẩu"
                                     aria-label="Password"
                                     aria-describedby="basic-addon1"
                                     onkeypress="key_press(event)"
+                                    name="pass"
                                 />
                             </div>
                             <div class="form-group form-check form-check-login">
@@ -121,7 +124,6 @@
                                 id="btn-login-signup"
                                 class="btn btn-warning btn-lg btn-shadow"
                                 onclick="login_func()"
-                                href=""
                                 >Đăng nhập</a
                             >
                         </div>

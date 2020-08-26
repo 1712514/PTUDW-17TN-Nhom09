@@ -1,16 +1,15 @@
 login_func = () => {
-    var input = document.getElementById("username-input").value;
-    if (input == "student"){
-        document.getElementById("btn-login-signup").href="/users/student/Shomepage";
-        window.location.href = "/users/student/Shomepage";
-    }
-    else if (input == "teacher"){
-        document.getElementById("btn-login-signup").href="/users/teacher/Thomepage";
-        window.location.href = "/users/teacher/Thomepage";
-    }
-    else {
-        alert("Sai tên đăng nhập hoặc mật khẩu!!!");
-    }
+    var user = document.getElementById("username-input").value;
+    var pass = document.getElementById("password-input").value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        
+      }
+    };
+    xhttp.open("POST", "/", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhttp.send("user=" + user + "&pass=" + pass);
 }
 key_press = (e) => {
     if(e.keyCode === 13){
