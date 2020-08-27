@@ -19,8 +19,10 @@ router.post('/', function(req, res, next) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      if (this.responseText == "YES"){
-        res.send("sid"); // them username teacher
+      if (this.responseText != "NO"){
+        var link = (this.responseText.startsWith("student")) ? "student/Shomepage" : "teacher/Thomepage";
+        link = "https://uniez.herokuapp.com/users/" + link + "?sid=" + this.responseText.substr[7];
+        res.send(link);
       }
       else {
         res.send("fail");

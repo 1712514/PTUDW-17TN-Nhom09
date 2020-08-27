@@ -4,12 +4,13 @@ login_func = () => {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        if (this.responseText == "fail"){
+        if (this.responseText.startsWith("fail")){
           window.location.href = "https://uniez.herokuapp.com";
         }
         else {
-          // luu sid vao local storage de moi lan dang n
-          
+          var s = this.responseText;
+          sessionStorage.setItem('sid', s.split('=')[1]);
+          window.location.href = s;
         }
       }
     };
