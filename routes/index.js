@@ -22,8 +22,8 @@ router.post('/', function(req, res, next) {
     if (this.readyState == 4 && this.status == 200) {
       if (this.responseText != "NO"){
         var link = (this.responseText.startsWith("student")) ? "student/Shomepage" : "teacher/Thomepage";
-        link = "/users/" + link + "?sid=" + this.responseText.substr(7);
-        console.log(link);
+        link = "/users/" + link;
+        res.cookie('sid', this.responseText.substr(7));
         res.send(link);
       }
       else {
