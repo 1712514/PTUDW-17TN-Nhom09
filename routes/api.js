@@ -7,6 +7,7 @@ var md5 = require('md5');
 const Events = require('../Model/events');
 const Questions = require('../Model/questions');
 const { request, response } = require('../app');
+const { replaceOne } = require('../Model/history');
 router.get("/history/:key", async (request, response)=> {
     try {
       var key = request.params.key;
@@ -99,5 +100,16 @@ router.get("/user/:id", async(request, response) => {
         } catch (error) {
           response.status(500).send(error);
         }
+});
+
+router.get("/sid/:sid", async(request, response) =>{
+    try {
+        var id = request.params.sid;
+        var result = await User.find({_id: id});
+        console.log(result.length);
+        if(result.length = 1) response.send("YES");
+      } catch (error) {
+        response.send("NO");
+      }
 });
 module.exports = router;

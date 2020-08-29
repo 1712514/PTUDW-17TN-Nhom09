@@ -6,8 +6,20 @@ var router = express.Router();
 // check sid
 checksid = (sid) => {
   // connect db
-  
-  return false;
+  console.log(sid);
+  var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+      if(this.responseText == "YES") return true;
+      else return false;
+    }
+  };
+  var url = "http://localhost:3000/api/sid/" + sid;
+  console.log(url);
+  xhttp.open("GET", url , true);
+  xhttp.send();
 }
 
 // Student
