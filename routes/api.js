@@ -5,7 +5,6 @@ const History = require('../Model/history');
 var md5 = require('md5');
 
 const Events = require('../Model/events');
-const User = require('../Model/user');
 const Questions = require('../Model/questions');
 const { request, response } = require('../app');
 router.get("/history/:key", async (request, response)=> {
