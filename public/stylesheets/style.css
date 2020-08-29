@@ -89,6 +89,7 @@ tr {
   );
 }
 .card-back {
+  padding: 20px;
   transform: rotateY(180deg);
 }
 .next-previous {

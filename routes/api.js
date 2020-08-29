@@ -4,6 +4,10 @@ var router = express.Router();
 const History = require('../Model/history');
 var md5 = require('md5');
 
+const Events = require('../Model/events');
+const User = require('../Model/user');
+const Questions = require('../Model/questions');
+const { request, response } = require('../app');
 router.get("/history/:key", async (request, response)=> {
     try {
       var key = request.params.key;
@@ -61,4 +65,14 @@ router.get("/history/:key", async (request, response)=> {
       response.status(500).send(error);
     }
   });
+
+router.get("/questions/:key", async(request, response) => {
+    try {
+        var key = request.params.key;
+        var result = await Questions.find({id: key});
+        response.send(result);
+      } catch (error) {
+        response.status(500).send(error);
+      }
+});
 module.exports = router;
