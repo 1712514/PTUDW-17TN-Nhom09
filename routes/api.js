@@ -3,7 +3,7 @@ const User = require('../Model/user');
 var router = express.Router();
 const History = require('../Model/history');
 var md5 = require('md5');
-
+const Exam = require('../Model/exams');
 const Events = require('../Model/events');
 const Questions = require('../Model/questions');
 const { request, response } = require('../app');
@@ -111,5 +111,16 @@ router.get("/sid/:sid", async(request, response) =>{
       } catch (error) {
         response.send("NO");
       }
+});
+
+// get exams
+router.get("/exam/:id", async(request, response) =>{
+  try {
+    var id = request.params.id;
+    var result = await Exam.find({id: id});
+    response.send(result);
+  } catch (error) {
+    response.send("NO");
+  }
 });
 module.exports = router;
