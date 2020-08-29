@@ -73,7 +73,7 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link font-white" href="https://uniez.herokuapp.com/"
+                                <a class="nav-link font-white" href="http://localhost:3000/"
                                     >Đăng xuất</a
                                 >
                             </li>
@@ -83,7 +83,11 @@
             </nav>
         {{{body}}}
         </div>
-
+        <script>
+            var tags = document.getElementsByTagName('a');
+            for (int i = 0; i < tags.length; i++)
+                tags[i].setAttribute(tags[i].getAttribute('href') += sessionStorage.getItem('sid'));
+        </script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

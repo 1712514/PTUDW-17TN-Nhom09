@@ -6,79 +6,82 @@ var router = express.Router();
 // check sid
 checksid = (sid) => {
   // connect db
-  return true;
+  
+  return false;
 }
 
 // Student
 router.get('/student/Shomepage', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Shomepage', { title: 'Trang chủ', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/student/Sprofile', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Sprofile', { title: 'Thông tin', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/student/Ssearchreview', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Ssearchreview', { title: 'Luyện chuyên đề', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/student/Ssearchtest', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Ssearchtest', { title: 'Luyện đề', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/student/Stest', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Stest', { title: 'Luyện đề', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/student/Sevent', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Sevent', { title: 'Luyện đề', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/student/Sreview', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Sreview', { title: 'Luyện chuyên đề', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/student/Sscoreboard', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('student/Sscoreboard', { title: 'Bảng xếp hạng', layout:'student/student-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 // Teacher
 router.get('/teacher/Thomepage', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  console.log("IN");
+  console.log(req.cookies.sid);
+  if (checksid(req.cookies.sid))
     res.render('teacher/Thomepage', { title: 'Trang chủ', layout:'teacher/teacher-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/teacher/Tscoreboard', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('teacher/Tscoreboard', { title: 'Bảng xếp hạng', layout:'teacher/teacher-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/teacher/Tprofile', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('teacher/Tprofile', { title: 'Thông tin', layout:'teacher/teacher-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });
 });
 router.get('/teacher/Tevent', function(req, res, next) {
-  if (checksid(req.query['sid']))
+  if (checksid(req.cookies.sid))
     res.render('teacher/Tevent', { title: 'Thông tin', layout:'teacher/teacher-layout' });
   else
     res.render('login', { title: 'Đăng nhập' });

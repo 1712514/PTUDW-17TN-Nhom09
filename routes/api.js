@@ -1,9 +1,10 @@
 var express = require('express');
-const { model } = require('../Model/user');
+const User = require('../Model/user');
 var router = express.Router();
 const History = require('../Model/history');
+var md5 = require('md5');
+
 const Events = require('../Model/events');
-const User = require('../Model/user');
 const Questions = require('../Model/questions');
 const { request, response } = require('../app');
 router.get("/history/:key", async (request, response)=> {
@@ -39,6 +40,26 @@ router.get("/history/:key", async (request, response)=> {
         name: item.user.name, grade: item.score
       }));
       response.send(result);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+  });
+  router.get("/auth/:user&:pass", async (request, response)=> {
+    try {
+      var user = request.params.user;
+      var pass = request.params.pass;
+      
+      var result = await User.find({email: user, pass: md5(pass)});
+      if(result.length == 0)
+        response.send("NO");
+      else {
+        if (result[0]['authority'] == "1")
+          response.send("teacher"+result[0]['_id']);
+        else if (result[0]['authority'] == "0")
+          response.send("student"+result[0]['_id']);
+        else 
+          response.send("admin"+result[0]['_id']);
+      }
     } catch (error) {
       response.status(500).send(error);
     }
