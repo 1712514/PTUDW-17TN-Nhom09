@@ -5,24 +5,24 @@ var router = express.Router();
 
 // check sid
 checksid = (sid, callback) => {
-  // connect db
-  // console.log(sid);
-  // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-  // var xhttp = new XMLHttpRequest();
-  // xhttp.onreadystatechange = function() {
-  //   if (this.readyState == 4 && this.status == 200) {
-  //     console.log(this.responseText);
-  //     if(this.responseText == "YES")
-  //       callback(true);
-  //     else
-  //       callback(false);
-  //   }
-  // };
-  // var url = "http://localhost:3000/api/sid/" + sid;
-  // console.log(url);
-  // xhttp.open("GET", url , true);
-  // xhttp.send();
-  callback(true);
+  //connect db
+  console.log(sid);
+  var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+      if(this.responseText == "YES"){
+        callback(true);
+      }
+      else
+        callback(false);
+    }
+  };
+  var url = "http://localhost:3000/api/sid/" + sid;
+  console.log(url);
+  xhttp.open("GET", url , true);
+  xhttp.send();
 }
 
 // Student

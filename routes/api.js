@@ -82,7 +82,7 @@ router.get("/user/:id", async(request, response) => {
         var result = await User.aggregate([
             {
               $match: {
-                "id": id
+                "_id": id
               }
             },
             {

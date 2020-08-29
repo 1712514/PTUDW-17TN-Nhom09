@@ -1,5 +1,5 @@
 function relocateScoreboard() {
-  location.href = "../html/Sscoreboard?sid="+sessionStorage.getItem('sid');
+  location.href = "../student/Sscoreboard?sid="+sessionStorage.getItem('sid');
 }
 
 function getStartKey() {
