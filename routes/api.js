@@ -116,11 +116,42 @@ router.get("/sid/:sid", async(request, response) =>{
 // get exams
 router.get("/exam/:id", async(request, response) =>{
   try {
+    var n = 0;
     var id = request.params.id;
     var result = await Exam.find({id: id});
-    response.send(result);
+    var temp = "Câu ";
+    var res = [];
+    result[0].question.map(async(item) => {
+      var a = await Questions.find({id: item});
+      n = n + 1;
+      a = a.map(async(i) => {
+        await res.push({order: temp + n,
+          question: i.content,
+          A: i.a,
+          B: i.b,
+          C: i.c,
+          D: i.d,
+          Sol: i.sol,
+          answer: i.ans,});
+      });
+    });
+    setTimeout(() => { response.send(res); }, 1500);
+    
   } catch (error) {
     response.send("NO");
   }
 });
+
+router.get("/exam", async(request, response) =>{
+  try {
+    var result = await Exam.find();
+    result = result.map((item) => ({
+      title: item.name, id: item.id,
+    }));
+    response.send(result);
+    
+  } catch (error) {
+    response.send("NO");
+  }
+})
 module.exports = router;

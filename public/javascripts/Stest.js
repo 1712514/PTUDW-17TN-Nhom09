@@ -240,11 +240,8 @@
 //   D:"Saccarozo tác dụng H2SO4 đậm đặc đun nóng bị hóa đen, còn glucozo thì không có phản ứng này",
 //   answer:"A"},
 // ];
-var _data;
-fetch('http://localhost:3000/api/exam/su00001').then(response => response.json()).then(data =>{
-  _data = data;
-  console.log(_data);
-});
+var questions = fetch('http://localhost:3000/api/exam/su1').then(response => response.json()).then(data => questions = data);
+setTimeout(() => { 
 
 var endTime = new Date().getTime() + 5400000;//90'
 var x = setInterval(function() {
@@ -312,7 +309,7 @@ $(document).ready(function(){
       
       $("<div/>",{"class":"row background-T","id":"s01_" + i.toString()}).appendTo("#section"+i.toString());
       
-      $("<div/>",{"class":"col-md-9 col-lg-9 col-xl-9 question","id":"s02_"+i.toString()}).appendTo("#s01_"+i.toString());
+      $("<div/>",{"class":"col-md-11 col-lg-11 col-xl-11 question","id":"s02_"+i.toString()}).appendTo("#s01_"+i.toString());
       
       $("<p/>",{text:questions[i].order +": "+ questions[i].question}).appendTo("#s02_"+i.toString());
       
@@ -339,8 +336,6 @@ $(document).ready(function(){
                   break;
                 }
               }
-              $("<div/>",{"class":"col-md-2 col-lg-2 col-xl-2 image-T","id":"image_"+i.toString()}).appendTo("#s01_"+i.toString());
-              $("<img/>",{"class":"image-test-T","src":"../resource/homepage-test.jpg","alt":"abc"}).appendTo("#image_"+i.toString())
               if(i == questions.length-1){
                 $("<div/>",{"class":"emptySpace", "id" :"endSection"}).appendTo("#section"+i.toString());
               }
@@ -396,7 +391,7 @@ function showResult(){
     $("<div/>",{"class":"flip-card","id":"hintCard_" + i.toString()}).appendTo("#hint_"+i.toString());
     $("<div/>",{"class":"card-front-T","id":"front_"+i.toString(),text:"Nhấn để xem gợi ý bài giải"}).appendTo("#hintCard_" + i.toString());
     $("<div/>",{"class":"card-back-T","id":"back_"+i.toString()}).appendTo("#hintCard_" + i.toString());
-    $("<p/>",{text:"ã"}).appendTo("#back_" + i.toString());
+    $("<p/>",{text: questions[i].Sol}).appendTo("#back_" + i.toString());
 
     $("#hintCard_"+i.toString()).click(function(){
       $(this).toggleClass("is-flipped");
@@ -459,3 +454,4 @@ function respon_timeTable() {
     $("#Bbox").prepend(temp1);
   }
 }
+}, 2000);
