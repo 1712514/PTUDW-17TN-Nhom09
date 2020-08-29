@@ -53,4 +53,30 @@ router.get("/questions/:key", async(request, response) => {
         response.status(500).send(error);
       }
 });
+
+router.get("/user/:id", async(request, response) => {
+    try {
+        var id = request.params.id;
+        var result = await User.aggregate([
+            {
+              $match: {
+                "id": id
+              }
+            },
+            {
+              $lookup: {
+                from: 'history',
+                localField: 'id',
+                foreignField: 'id_student',
+                as: 'history'
+              }
+            },
+            
+          ]);
+          
+          response.send(result);
+        } catch (error) {
+          response.status(500).send(error);
+        }
+});
 module.exports = router;

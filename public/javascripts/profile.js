@@ -1,12 +1,3 @@
-getFullName = () => {
-    return "Nguyễn Minh Quân";
-}
-getEmail = () => {
-    return "nguyenquanfake@gmail.com";
-}
-getPassword = () => {
-    return  "hihihaha";
-}
 getAvatarURI = () => {
     return "/resource/avatar.jpg";
 }
@@ -24,6 +15,7 @@ getAchievement = () => {
     }
 }
 createRow = (rowdata) => {
+    console.log(rowdata);
     var tr = document.createElement("tr");
     tr.setAttribute("class", "font-white");
     var th = document.createElement("th");
@@ -42,9 +34,14 @@ fillAchievement = () => {
         body.appendChild(createRow([key, data[key]]));
     })
 }
-
-document.getElementById("avatar").setAttribute("src", getAvatarURI());
-document.getElementById("nameinfo").innerHTML += getFullName();
-document.getElementById("emailinfo").innerHTML += getEmail();
-//document.getElementById("passwordinfo").innerHTML += getPassword();
-fillAchievement();
+fetch('http://localhost:3000/api/user/1').then(response => response.json()).then(data =>{
+    document.getElementById("avatar").setAttribute("src", getAvatarURI());
+    document.getElementById("nameinfo").innerHTML += data[0].name;
+    document.getElementById("emailinfo").innerHTML += data[0].email;
+    //document.getElementById("passwordinfo").innerHTML += getPassword();
+    var body = document.getElementById("achiebody");
+    for(var i = 0; i < data[0].history.length; i++){
+        console.log(data[i]);
+        body.appendChild(createRow([data[0].history[i].id_event,data[0].history[i].score]));
+    }
+});
