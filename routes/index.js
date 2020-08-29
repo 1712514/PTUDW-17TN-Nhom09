@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const History = require('../Model/history');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,7 +22,8 @@ router.post('/', function(req, res, next) {
     if (this.readyState == 4 && this.status == 200) {
       if (this.responseText != "NO"){
         var link = (this.responseText.startsWith("student")) ? "student/Shomepage" : "teacher/Thomepage";
-        link = "https://uniez.herokuapp.com/users/" + link + "?sid=" + this.responseText.substr[7];
+        link = "/users/" + link + "?sid=" + this.responseText.substr(7);
+        console.log(link);
         res.send(link);
       }
       else {
@@ -29,11 +31,47 @@ router.post('/', function(req, res, next) {
       }
     }
   };
-  var url = "http://localhost:8080/" + user + '&' + pass;
+  var url = "http://localhost:3000/api/auth/" + user + '&' + pass;
   console.log(url);
   xhttp.open("GET", url , true);
   xhttp.send();
 });
 
-
+router.get("/api/history/:key", async (request, response)=> {
+  try {
+    var key = request.params.key;
+    var result = await History.aggregate([
+      {
+        $match: {
+          "id_event": key
+        }
+      },
+      {
+        $lookup: {
+          from: 'user',
+          localField: 'id_student',
+          foreignField: 'id',
+          as: 'user'
+        }
+      },
+      { 
+        "$project": { 
+          "score": 1,
+          "user": { "$arrayElemAt": [ "$user", 0 ] } 
+        }
+      },
+      {
+        $sort: {
+          score: -1
+        }
+      }
+    ]);
+    result = result.map((item) => ({
+      name: item.user.name, grade: item.score
+    }));
+    response.send(result);
+  } catch (error) {
+    response.status(500).send(error);
+  }
+});
 module.exports = router;

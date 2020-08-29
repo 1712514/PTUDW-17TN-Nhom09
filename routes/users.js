@@ -60,6 +60,8 @@ router.get('/student/Sscoreboard', function(req, res, next) {
 });
 // Teacher
 router.get('/teacher/Thomepage', function(req, res, next) {
+  console.log("IN");
+  console.log(req.query['sid']);
   if (checksid(req.query['sid']))
     res.render('teacher/Thomepage', { title: 'Trang chủ', layout:'teacher/teacher-layout' });
   else

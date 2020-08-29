@@ -5,12 +5,12 @@ login_func = () => {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         if (this.responseText.startsWith("fail")){
-          window.location.href = "https://uniez.herokuapp.com";
+          window.location = "localhost:3000";
         }
         else {
           var s = this.responseText;
           sessionStorage.setItem('sid', s.split('=')[1]);
-          window.location.href = s;
+          window.location = s;
         }
       }
     };
