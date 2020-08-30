@@ -88,7 +88,7 @@ router.get("/user/:id", async(request, response) => {
             {
               $lookup: {
                 from: 'history',
-                localField: 'id',
+                localField: '_id',
                 foreignField: 'id_student',
                 as: 'history'
               }

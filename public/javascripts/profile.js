@@ -35,7 +35,7 @@ fillAchievement = () => {
     })
 }
 console.log(sessionStorage.getItem('sid'));
-fetch('http://localhost:3000/api/user/' + sessionStorage.getItem('sid')).then(response => response.json()).then(data =>{
+fetch('http://localhost:3000/api/user/' + document.cookie.split(';')[1].split('=')[1]).then(response => response.json()).then(data =>{
     document.getElementById("avatar").setAttribute("src", getAvatarURI());
     document.getElementById("nameinfo").innerHTML += data[0].name;
     document.getElementById("emailinfo").innerHTML += data[0].email;
