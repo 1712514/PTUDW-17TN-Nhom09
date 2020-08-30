@@ -688,6 +688,9 @@ height: 30vh;
 }
 
 .btn-confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 background-image: linear-gradient(
     to right,
     #ff8008 0%,
