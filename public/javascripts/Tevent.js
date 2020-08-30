@@ -8,7 +8,7 @@ function loadFilename() {
 }
 
 function relocateHomepage() {
-  location.href = "../teacher/thomepage/";
+  location.href = "http://localhost:3000/users/teacher/thomepage/";
 }
 
 function getEnter() {
@@ -20,3 +20,14 @@ function getEnter() {
 }
 
 getEnter();
+function makeid(length) {
+  var result           = '';
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+document.getElementById('random-please').innerHTML="Key của cuộc thi là " + makeid(6);
