@@ -79,16 +79,21 @@ router.get("/questions/:key", async(request, response) => {
 router.get("/user/:id", async(request, response) => {
     try {
         var id = request.params.id;
+        if(id[id.length - 1] == 'd') id = "1";
+        else{
+          if(id[id.length - 1] == 'e') id = "2";
+          else id = "3";
+        }
         var result = await User.aggregate([
             {
               $match: {
-                "_id": id
+                "id": id
               }
             },
             {
               $lookup: {
                 from: 'history',
-                localField: '_id',
+                localField: 'id',
                 foreignField: 'id_student',
                 as: 'history'
               }
@@ -132,7 +137,8 @@ router.get("/exam/:id", async(request, response) =>{
           C: i.c,
           D: i.d,
           Sol: i.sol,
-          answer: i.ans,});
+          answer: i.ans.toUpperCase()
+        });
       });
     });
     setTimeout(() => { response.send(res); }, 1500);
