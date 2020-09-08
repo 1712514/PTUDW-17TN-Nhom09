@@ -14,7 +14,7 @@ Run = (key) => {
         document.querySelector(".flip-card").classList.toggle("is-flipped");
         flip = 0;
     }
-    fetch('http://localhost:3000/api/questions/' + key).then(response => response.json()).then(data => {
+    fetch('https://uniez.herokuapp.com/api/questions/' + key).then(response => response.json()).then(data => {
     $("#content").text(data[0].content);
     $("#a").text(data[0].a);
     $("#b").text(data[0].b);
