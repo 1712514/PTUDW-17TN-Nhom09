@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
       }
     }
   };
-  var url = "http://localhost:3000/api/auth/" + user + '&' + pass;
+  var url = "https://uniez.herokuapp.com/api/auth/" + user + '&' + pass;
   console.log(url);
   xhttp.open("GET", url , true);
   xhttp.send();

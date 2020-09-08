@@ -19,7 +19,7 @@ checksid = (sid, callback) => {
         callback(false);
     }
   };
-  var url = "http://localhost:3000/api/sid/" + sid;
+  var url = "https://uniez.herokuapp.com/api/sid/" + sid;
   console.log(url);
   xhttp.open("GET", url , true);
   xhttp.send();
