@@ -82,4 +82,4 @@ function _filter(ClassName,Id_This){
         }
     }
 }
-}, 500);
+}, 1000);
