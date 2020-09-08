@@ -213,4 +213,4 @@ function respon_timeTable() {
     $("#Bbox").prepend(temp1);
   }
 }
-}, 2000);
+}, 2500);
