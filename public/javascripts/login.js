@@ -5,7 +5,7 @@ login_func = () => {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         if (this.responseText.startsWith("fail")){
-          window.location = "localhost:3000";
+          window.location = "https://uniez.herokuapp.com/";
         }
         else {
           var s = this.responseText;

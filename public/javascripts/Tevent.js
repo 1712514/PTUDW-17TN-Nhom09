@@ -8,7 +8,7 @@ function loadFilename() {
 }
 
 function relocateHomepage() {
-  location.href = "http://localhost:3000/users/teacher/thomepage/";
+  location.href = "https://uniez.herokuapp.com/users/teacher/thomepage/";
 }
 
 function getEnter() {

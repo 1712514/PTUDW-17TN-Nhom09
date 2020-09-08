@@ -19,7 +19,7 @@ var news = [
 
 
 function relocate_create() {
-    location.href = "http://localhost:3000/users/teacher/tevent";
+    location.href = "https://uniez.herokuapp.com/users/teacher/tevent";
 }
 
 function show_news() {

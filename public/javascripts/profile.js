@@ -36,7 +36,7 @@ fillAchievement = () => {
 }
 console.log(sessionStorage.getItem('sid'));
 document.getElementById("avatar").setAttribute("src", getAvatarURI());
-fetch('http://localhost:3000/api/user/' + document.cookie.replace("sid=", "")).then(response => response.json()).then(data =>{
+fetch('https://uniez.herokuapp.com/api/user/' + document.cookie.replace("sid=", "")).then(response => response.json()).then(data =>{
     console.log(data);
     document.getElementById("nameinfo").innerHTML += data[0].name;
     document.getElementById("emailinfo").innerHTML += data[0].email;

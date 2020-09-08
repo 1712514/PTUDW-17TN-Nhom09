@@ -1,4 +1,4 @@
-var tests = fetch('http://localhost:3000/api/exam').then(response => response.json()).then(data => tests = data);
+var tests = fetch('https://uniez.herokuapp.com/api/exam').then(response => response.json()).then(data => tests = data);
 
 setTimeout(() => {
 $(document).ready(function(){

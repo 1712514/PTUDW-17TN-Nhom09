@@ -1,5 +1,5 @@
 
-fetch('http://localhost:3000/api/history/su1820').then(response => response.json()).then(data => {
+fetch('https://uniez.herokuapp.com/api/history/su1820').then(response => response.json()).then(data => {
     // http://localhost:8080/history/su1820
     //ham khoi tao bxh
     var rank = document.getElementById("rank");
